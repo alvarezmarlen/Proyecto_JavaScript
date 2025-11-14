@@ -12,9 +12,15 @@
 
 <body>
     <header>
+        <img src="assets/img/logo.png" alt="Logo">
+
         <h1>Accceso y Tipado Parceo-casteo </h1>
 
-        <img src="" alt="">
+        <nav>
+
+            <a href="index.html">Inicio</a>
+            <a href="metodos-seleccion.html">Metodos de seleccion</a>
+        </nav>
     </header>
     <main>
         <section>
@@ -97,20 +103,98 @@
                     $``\\``$ para mostrar una barra invertida literal</p>
 
                 <h3>Secuencias de escape comunes</h3>
-
-                <li>``\\``': Barra invertida para escapar un carácter de barra invertida.</li>
-                <li>``\\``": Barra invertida para escapar comillas dobles dentro de una cadena de comillas dobles.</li>
-                <li>``\\``': Barra invertida para escapar comillas simples dentro de una cadena de comillas simples.</li>
-                <li>``\\n``$: Nueva línea.</li>
-                <li>``\\t``$: Tabulación.</li>
-                <li>``\\b``$: Retroceso.</li>
-                <li>``\\f``$: Salto de página.</li>
-                <li>``\\f``$: Salto de página.</li>
-
-
-
+                <ul>
+                    <li>``\\``': Barra invertida para escapar un carácter de barra invertida.</li>
+                    <li>``\\``": Barra invertida para escapar comillas dobles dentro de una cadena de comillas dobles.
+                    </li>
+                    <li>``\\``': Barra invertida para escapar comillas simples dentro de una cadena de comillas simples.
+                    </li>
+                    <li>``\\n``$: Nueva línea.</li>
+                    <li>``\\t``$: Tabulación.</li>
+                    <li>``\\b``$: Retroceso.</li>
+                    <li>``\\f``$: Salto de página.</li>
+                    <li>``\\f``$: Salto de página.</li>
+                </ul>
             </div>
         </section>
+
+        <section>
+            <h2>Parseo/Casteo</h2>
+            <div>
+
+
+                <h3>Tipos de variable de entrada</h3>
+
+                <p>En JavaScript, los tipos de variable de entrada se pueden agrupar enprimitivos y objetos. Los tipos
+                    primitivos son number, string, bigint, boolean, null, undefined y symbol. El tipo no primitivo es
+                    object, que incluye objetos complejos como arreglos (arrays), funciones y objetos personalizados</p>
+
+                <h3>Tipos primitivos</h3>
+                <ul>
+                    <li>number: Para números enteros y decimales.</li>
+                    <li>string: Para secuencias de caracteres (texto).</li>
+                    <li>bigint: Para números enteros más allá del rango estándar de number.</li>
+                    <li>boolean: Para valores lógicos de true o false.</li>
+                    <li>null: Representa la ausencia intencionada de valor.</li>
+                    <li>undefined: Representa un valor que no ha sido asignado.</li>
+                    <li>symbol: Un valor único e inmutable.</li>
+                </ul>
+
+
+                <h3>Tipos no primitivos</h3>
+
+                <p>object: Un tipo complejo que puede contener colecciones de datos y estructuras de mayor complejidad.
+                    Incluye:</p>
+                <ul>
+                    <li>Arrays: Listas de valores.</li>
+                    <li>function: Que pueden ser asignadas a variables.</li>
+                    <li>Objetos personalizados: Estructuras con propiedades y métodos. </li>
+                </ul>
+
+                <h3>Parseo</h3>
+
+                <p>
+                    significa analizar y convertir una cadena de texto en un formato que el motor de JavaScript pueda
+                    entender Los métodos de "parseo" más comunes son:</p>
+
+                <ul>
+                    <li>JSON.parse() para convertir una cadena en formato JSON a un objeto JavaScript,</li>
+                    <li>parseInt() para convertir una cadena a un número entero</li>
+                    <li>parseFloat() para convertir una cadena a un número decimal</li>
+                    <li>Date.parse() para analizar una cadena y convertirla en el número de milisegundos de una fecha.
+                    </li>
+                    <li>El String()El método convierte un valor en una cadena.</li>
+                </ul>
+
+                <h3>Casteo</h3>
+
+                <p>es el proceso de convertir un valor de un tipo de dato a otro. Se le conoce más formalmente como
+                    conversión de tipos. </p>
+
+                <h4>1. Conversión implícita (coerción de tipos) </h4>
+                <p>Esta conversión ocurre automáticamente cuando JavaScript realiza una operación entre valores de tipos
+                    de datos diferentes. El intérprete intenta convertir uno de los valores para que la operación pueda
+                    ser completada.</p>
+
+                <p>Ejemplos</p>
+                <p>Al sumar una cadena de texto y un número, JavaScript convierte el número a cadena para concatenarlos.
+                </p>
+                <p>let resultado = '5' + 10; // El resultado es la cadena "510"</p>
+
+                <h4>1. Conversión explícita </h4>
+                <p>Esta conversión se realiza manualmente, usando funciones o métodos para cambiar el tipo de dato de
+                    forma intencional. Esto es útil para asegurarse de que el código se comporte como se espera y evitar
+                    errores.</p>
+
+                <p>Convertir a número: Usando las funciones Number(), parseInt() o parseFloat().</p>
+                <p>let texto = '25';<br>
+                    let numero = Number(texto); // numero es el número 25</p>
+                <p>let valor = ''; <br>
+                    let esVerdadero = Boolean(valor); // esVerdadero es false</p>
+            </div>
+        </section>
+
+
 
     </main>
 </body>

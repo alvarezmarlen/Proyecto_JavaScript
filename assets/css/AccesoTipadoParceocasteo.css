@@ -12,6 +12,22 @@ body {
     box-sizing: border-box; /* hace que width/height incluyan padding y border */
     font-family: sans-serif; /* opcional: define una fuente base */
     line-height: 1;      /* normaliza la altura de línea */
-    background: #fff;    /* opcional: fondo blanco por defecto */
+    background: #e2e1e1;    /* opcional: fondo blanco por defecto */
     color: #000;         /* opcional: color de texto negro */
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  background: rgb(98, 84, 134);
+  height: 8rem;
+}
+
+header  img{
+  display: flex;
+  justify-content:flex-start;
+  background: rgb(98, 84, 134);
+  height: 8rem;
+  margin-left: 2rem;
 }
