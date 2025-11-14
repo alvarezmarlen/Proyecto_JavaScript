@@ -1,0 +1,17 @@
+
+   /* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;           /* elimina el margen predeterminado */
+    padding: 0;          /* elimina el padding predeterminado */
+    box-sizing: border-box; /* hace que width/height incluyan padding y border */
+    font-family: sans-serif; /* opcional: define una fuente base */
+    line-height: 1;      /* normaliza la altura de línea */
+    background: #fff;    /* opcional: fondo blanco por defecto */
+    color: #000;         /* opcional: color de texto negro */
+}
