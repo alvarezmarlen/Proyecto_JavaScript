@@ -22,7 +22,23 @@
     }
     details{
         margin-bottom: 3rem;
-    }  
+    }
+    
+    .ejemplos{
+        margin-left: 6rem;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    p{
+        font-size: 2rem;
+        margin-left: 9rem;
+    }
+
+    button{
+        margin-left: 9rem;
+        font-size: 2rem;
+    }
 
 
 
@@ -43,19 +59,55 @@
         <section class="container">
             <details>
                 <summary>document.getElementById()</summary>
+                    <details>
+                        <summary class="ejemplos">Ejemplo 1 <small>(Seleccionar un elemento por ID)</small></summary>
+                            <h1 id="saludo"></h1>
+                    </details>                    
+                    
+                    <details>
+                        <summary class="ejemplos">Ejemplo 2 <small>(Obtener un elemento por ID y usar su contenido en otro elemento)</small></summary>
+                            <p id="intro">Cómo encontrar elementos HTML por su ID</p>
+                            <p id="demo"></p>
+                    </details>                    
+                    
+                    <details>
+                        <summary class="ejemplos">Ejemplo 3 <small>(Sin botones, cambio automático al cargar)</small></summary>
+                            <p id="saludos">Hello Mundo</p>
+                    </details>                    
+                    
+                    <details>
+                        <summary class="ejemplos">Ejemplo 4 <small>(Reaccionando a otros eventos: mouseover, click, input, etc.)</small></summary>
+                            <p id="por-encima">Pasa el mouse por encima</p> <!-- hover -->
+
+                            <button id="btnClick">Haz clic aquì</button>
+                            <p id="resClick"></p>
+
+                            <input type="text">
+                    </details> 
+                    
+                    <details>
+                        <summary class="ejemplos">Ejemplo 5<small>(Reaccionando a otros eventos mouseover, hover, input, etc.)</small></summary>
+                            <p id="texto"></p>
+                    </details>
+                    
+
             </details>        
+
 
             <details>
                 <summary>getElementsByClassName()</summary>
             </details>        
 
+
             <details>
                 <summary>getElementsByTagName()</summary>
             </details>        
 
+
             <details>
                 <summary>querySelector()</summary>
             </details>        
+
 
             <details>
                 <summary>querySelectorAll()</summary>
@@ -71,6 +123,7 @@
 
     <footer>
       <p>&copy; 2025 Derechos Reservados</p>
-    </footer>    
+    </footer> 
+    <script src="assets/js/metodos-seleccion.js"></script>   
 </body>
 </html>
