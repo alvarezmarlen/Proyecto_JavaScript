@@ -12,39 +12,62 @@
 
 <body>
     <header>
-        <img src="assets/img/logo.png" alt="Logo">
+       <a href="index.html"><img src="assets/img/logo.png" alt="Logo"></a>
 
         <h1>Accceso y Tipado Parceo-casteo </h1>
 
         <nav>
-
             <a href="index.html">Inicio</a>
             <a href="metodos-seleccion.html">Metodos de seleccion</a>
         </nav>
     </header>
     <main>
         <section>
-            <div>
+            <div class="contenedor">
 
-                <h2>Tipado dinámico</h2>JavaScript es un lenguaje débilmente tipado y dinámico. Las variables en
-                JavaScript no están asociadas directamente con ningún tipo de valor en particular, y a cualquier
-                variable se le puede asignar (y reasignar) valores de todos los tipos
-
-                <p>JavaScript es un lenguaje débilmente tipado y dinámico. Las variables en JavaScript no están
+                <p>JavaScript es un lenguaje de tipado dinámico, Las variables en JavaScript no están
                     asociadas directamente con ningún tipo de valor en particular, y a cualquier variable se le puede
                     asignar (y reasignar) valores de todos los tipos:</p><br>
-                <pre>                    let foo = 42; // foo ahora es un número
-                    foo = "bar"; // foo ahora es un string
-                    foo = true; // foo ahora es un booleano
-                </pre>
+                <ul>
+                    <li> let foo = 42; // foo ahora es un número</li>
+                    <li>foo = "bar"; // foo ahora es un string</li>
+                    <li>foo = true; // foo ahora es un booleano</li>
+                </ul>
+
+                <button class="btn btn-show" onclick="toggleEditor(this)">Mostrar Editor</button>
+
+                <div class="editor-wrapper">
+                    <textarea class="editor" oninput="runQuokka(this)" placeholder="Escribe tu código...">
+</textarea>
+
+                    <div class="quokka-console" id="console-1">
+                        <div class="quokka-line log"><span class="quokka-icon">→</span> <span>Salida en vivo...</span>
+                        </div>
+                    </div>
+
+                    <div class="console-controls">
+                        <div class="color-palette">
+                            <label>Fondo</label>
+                            <input type="color" value="#1e1e1e" onchange="setColor('--bg', this.value)">
+                            <label>Texto</label>
+                            <input type="color" value="#d4d4d4" onchange="setColor('--text', this.value)">
+                            <label>Log</label>
+                            <input type="color" value="#d4d4d4" onchange="setColor('--log', this.value)">
+                        </div>
+                        <div>
+                            <button class="btn btn-toggle" onclick="expandConsole(this)">Ampliar</button>
+                            <span class="status">● Live</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section>
-            <di>
+            <div class="contenedor">
                 <h2>Estructuras y tipos de datos</h2>
 
-                <h3>El último estándar ECMAScript define nueve tipos:</h3>
+                <p>El último estándar ECMAScript define nueve tipos:</p>
                 <ul>
                     <li>Undefined: typeof instance === "undefined"</li>
                     <li>Boolean: typeof instance === "boolean" </li>
@@ -52,28 +75,57 @@
                     <li>String: typeof instance === "string"</li>
                     <li>BigInt: typeof instance === "bigint"</li>
                     <li>Symbol: typeof instance === "symbol"</li>
-                    <li>Null: typeof instance === "object". <br> <span>ipo primitivo especial que tiene un uso adicional
+                    <li>Null: typeof instance === "object". <br><br><span>Tipo primitivo especial que tiene un uso
+                            adicional
                             para su valor: si el objeto no se hereda, se muestra null;</span></li>
-                    <li>Object: typeof instance === "object". <br><span>Tipo estructural especial que no es de datos
+                    <li>Object: typeof instance === "object". <br><br><span>Tipo estructural especial que no es de datos
                             pero para cualquier instancia de objeto construido que también se utiliza como estructuras
                             de datos: new Object, new Array, new Map, new Set, new WeakMap, new WeakSet, new Date y casi
                             todo lo hecho con la palabra clave new;</span></li>
                     <li>Function: una estructura sin datos, aunque también responde al operador typeof: typeof instance
-                        === "function". Esta simplemente es una forma abreviada para funciones, aunque cada constructor
-                        de funciones se deriva del constructor Object.</li>
+                        === "function". <br><br><span>sta simplemente es una forma abreviada para funciones, aunque cada
+                            constructor
+                            de funciones se deriva del constructor Object.</li></span>
                 </ul>
 
+                    <button class="btn btn-show" onclick="toggleEditor(this)">Mostrar Editor</button>
+
+                <div class="editor-wrapper">
+                    <textarea class="editor" oninput="runQuokka(this)" placeholder="Escribe tu código...">
+</textarea>
+
+                    <div class="quokka-console" id="console-1">
+                        <div class="quokka-line log"><span class="quokka-icon">→</span> <span>Salida en vivo...</span>
+                        </div>
+                    </div>
+
+                    <div class="console-controls">
+                        <div class="color-palette">
+                            <label>Fondo</label>
+                            <input type="color" value="#1e1e1e" onchange="setColor('--bg', this.value)">
+                            <label>Texto</label>
+                            <input type="color" value="#d4d4d4" onchange="setColor('--text', this.value)">
+                            <label>Log</label>
+                            <input type="color" value="#d4d4d4" onchange="setColor('--log', this.value)">
+                        </div>
+                        <div>
+                            <button class="btn btn-toggle" onclick="expandConsole(this)">Ampliar</button>
+                            <span class="status">● Live</span>
+                        </div>
+                    </div>
                 </div>
+            </div>
         </section>
         <section>
-            <h2>Notacion ()</h2>
-            <div>
+            <div class="contenedor">
+                <h2>Notacion ()</h2>
+
                 <p>La notación () en JavaScript se usa principalmente para la llamada a funciones, la agrupación de
                     expresiones para controlar la precedencia de operadores, y en el operador condicional ternario (?
                     :). También aparece en la definición de parámetros de función y en la sintaxis de las clases para la
                     herencia o el constructor</p>
 
-                <h3> Usos principales</h3>
+                <h4> Usos principales</h4>
                 <ul>
                     <li>Llamada a funciones: Se utilizan los paréntesis () para invocar (ejecutar) una función.
                     <li>miFuncion();</li>
@@ -92,17 +144,44 @@
                     </li>
 
                 </ul>
+                    <button class="btn btn-show" onclick="toggleEditor(this)">Mostrar Editor</button>
+
+                <div class="editor-wrapper">
+                    <textarea class="editor" oninput="runQuokka(this)" placeholder="Escribe tu código...">
+</textarea>
+
+                    <div class="quokka-console" id="console-1">
+                        <div class="quokka-line log"><span class="quokka-icon">→</span> <span>Salida en vivo...</span>
+                        </div>
+                    </div>
+
+                    <div class="console-controls">
+                        <div class="color-palette">
+                            <label>Fondo</label>
+                            <input type="color" value="#1e1e1e" onchange="setColor('--bg', this.value)">
+                            <label>Texto</label>
+                            <input type="color" value="#d4d4d4" onchange="setColor('--text', this.value)">
+                            <label>Log</label>
+                            <input type="color" value="#d4d4d4" onchange="setColor('--log', this.value)">
+                        </div>
+                        <div>
+                            <button class="btn btn-toggle" onclick="expandConsole(this)">Ampliar</button>
+                            <span class="status">● Live</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section>
-            <h2>Caracteres de Escape</h2>
-            <div>
+            <div class="contenedor">
+                <h2>Caracteres de Escape</h2>
+
                 <p>Los caracteres de escape en JavaScript se usan para representar caracteres especiales que no se
                     pueden escribir directamente en una cadena, usando la barra invertida (\(``\`{`}\)) seguida de otro
                     carácter. Ejemplos comunes son $``\\n``$ para una nueva línea, $``\\t``$ para una tabulación o
                     $``\\``$ para mostrar una barra invertida literal</p>
 
-                <h3>Secuencias de escape comunes</h3>
+                <h4>Secuencias de escape comunes</h4>
                 <ul>
                     <li>``\\``': Barra invertida para escapar un carácter de barra invertida.</li>
                     <li>``\\``": Barra invertida para escapar comillas dobles dentro de una cadena de comillas dobles.
@@ -115,21 +194,49 @@
                     <li>``\\f``$: Salto de página.</li>
                     <li>``\\f``$: Salto de página.</li>
                 </ul>
+            
+                 <button class="btn btn-show" onclick="toggleEditor(this)">Mostrar Editor</button>
+
+                <div class="editor-wrapper">
+                    <textarea class="editor" oninput="runQuokka(this)" placeholder="Escribe tu código...">
+</textarea>
+
+                    <div class="quokka-console" id="console-1">
+                        <div class="quokka-line log"><span class="quokka-icon">→</span> <span>Salida en vivo...</span>
+                        </div>
+                    </div>
+
+                    <div class="console-controls">
+                        <div class="color-palette">
+                            <label>Fondo</label>
+                            <input type="color" value="#1e1e1e" onchange="setColor('--bg', this.value)">
+                            <label>Texto</label>
+                            <input type="color" value="#d4d4d4" onchange="setColor('--text', this.value)">
+                            <label>Log</label>
+                            <input type="color" value="#d4d4d4" onchange="setColor('--log', this.value)">
+                        </div>
+                        <div>
+                            <button class="btn btn-toggle" onclick="expandConsole(this)">Ampliar</button>
+                            <span class="status">● Live</span>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </section>
 
         <section>
-            <h2>Parseo/Casteo</h2>
-            <div>
+            <div class="contenedor">
+                <h2>Parseo/Casteo</h2>
 
 
-                <h3>Tipos de variable de entrada</h3>
+                <h4>Tipos de variable de entrada</h4>
 
                 <p>En JavaScript, los tipos de variable de entrada se pueden agrupar enprimitivos y objetos. Los tipos
                     primitivos son number, string, bigint, boolean, null, undefined y symbol. El tipo no primitivo es
                     object, que incluye objetos complejos como arreglos (arrays), funciones y objetos personalizados</p>
 
-                <h3>Tipos primitivos</h3>
+                <h4>Tipos primitivos</h4>
                 <ul>
                     <li>number: Para números enteros y decimales.</li>
                     <li>string: Para secuencias de caracteres (texto).</li>
@@ -141,7 +248,7 @@
                 </ul>
 
 
-                <h3>Tipos no primitivos</h3>
+                <h4>Tipos no primitivos</h4>
 
                 <p>object: Un tipo complejo que puede contener colecciones de datos y estructuras de mayor complejidad.
                     Incluye:</p>
@@ -191,12 +298,112 @@
                     let numero = Number(texto); // numero es el número 25</p>
                 <p>let valor = ''; <br>
                     let esVerdadero = Boolean(valor); // esVerdadero es false</p>
+
+                <button class="btn btn-show" onclick="toggleEditor(this)">Mostrar Editor </button>
+              
+
+                <div class="editor-wrapper">
+                    <textarea class="editor" oninput="runQuokka(this)" placeholder="Escribe tu código...">
+</textarea>
+
+                    <div class="quokka-console" id="console-1">
+                        <div class="quokka-line log"><span class="quokka-icon">→</span> <span>Salida en vivo...</span>
+                        </div>
+                    </div>
+
+                    <div class="console-controls">
+                        <div class="color-palette">
+                            <label>Fondo</label>
+                            <input type="color" value="#1e1e1e" onchange="setColor('--bg', this.value)">
+                            <label>Texto</label>
+                            <input type="color" value="#d4d4d4" onchange="setColor('--text', this.value)">
+                            <label>Log</label>
+                            <input type="color" value="#d4d4d4" onchange="setColor('--log', this.value)">
+                        </div>
+                        <div>
+                            <button class="btn btn-toggle" onclick="expandConsole(this)">Ampliar</button>
+                            <span class="status">● Live</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
 
 
     </main>
+
+    <script>
+  // Mostrar/Ocultar editor
+  function toggleEditor(btn) {
+    const wrapper = btn.nextElementSibling;
+    const visible = wrapper.style.display === 'flex';
+    wrapper.style.display = visible ? 'none' : 'flex';
+    btn.textContent = visible ? 'Mostrar Editor' : 'Ocultar Editor';
+    btn.style.background = visible ? '#238636' : '#d73a49';
+  }
+
+  // Ampliar consola
+  function expandConsole(btn) {
+    const console = btn.closest('.editor-wrapper').querySelector('.quokka-console');
+    console.classList.toggle('expanded');
+    btn.textContent = console.classList.contains('expanded') ? 'Reducir' : 'Ampliar';
+  }
+
+  // Cambiar colores
+  function setColor(variable, value) {
+    document.documentElement.style.setProperty(variable, value);
+  }
+
+  // === QUOKKA.JS LIVE ENGINE ===
+  function runQuokka(textarea) {
+    const wrapper = textarea.closest('.editor-wrapper');
+    const consoleEl = wrapper.querySelector('.quokka-console');
+    consoleEl.innerHTML = '';
+
+    const logs = [];
+    const orig = { log: console.log, warn: console.warn, error: console.error, info: console.info };
+
+    console.log = (...args) => logs.push({ type: 'log', args });
+    console.warn = (...args) => logs.push({ type: 'warn', args });
+    console.error = (...args) => logs.push({ type: 'error', args });
+    console.info = (...args) => logs.push({ type: 'info', args });
+
+    try {
+      new Function(textarea.value)();
+    } catch (err) {
+      logs.push({ type: 'error', args: ['Runtime Error: ' + err.message] });
+    } finally {
+      console.log = orig.log;
+      console.warn = orig.warn;
+      console.error = orig.error;
+      console.info = orig.info;
+    }
+
+    // Renderizar salida
+    if (logs.length === 0) {
+      addLine(consoleEl, 'log', '→', 'Sin salida (agrega console.log)');
+    } else {
+      logs.forEach(log => {
+        const icon = 
+          log.type === 'log' ? '→' :
+          log.type === 'warn' ? '⚠' :
+          log.type === 'error' ? '✖' :
+          log.type === 'info' ? 'ℹ' : '✓';
+        addLine(consoleEl, log.type, icon, log.args.map(String).join(' '));
+      });
+    }
+  }
+
+  function addLine(parent, type, icon, text) {
+    const line = document.createElement('div');
+    line.className = `quokka-line ${type}`;
+    line.innerHTML = `<span class="quokka-icon">${icon}</span><span>${text}</span>`;
+    parent.appendChild(line);
+  }
+</script>
+
+
 </body>
 
 </html>

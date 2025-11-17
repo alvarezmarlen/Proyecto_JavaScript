@@ -12,22 +12,235 @@ body {
     box-sizing: border-box; /* hace que width/height incluyan padding y border */
     font-family: sans-serif; /* opcional: define una fuente base */
     line-height: 1;      /* normaliza la altura de línea */
-    background: #e2e1e1;    /* opcional: fondo blanco por defecto */
+    background: #fffdfd;    /* opcional: fondo blanco por defecto */
     color: #000;         /* opcional: color de texto negro */
 }
 
 header {
-  display: flex;
-  justify-content: center;
-  align-items:center ;
-  background: rgb(98, 84, 134);
-  height: 8rem;
+    display: flex;
+    align-items: center; /* centra verticalmente */
+    background: rgb(60, 221, 221);
 }
 
-header  img{
-  display: flex;
-  justify-content:flex-start;
-  background: rgb(98, 84, 134);
-  height: 8rem;
-  margin-left: 2rem;
+header img {
+    height: 8rem;
+    margin-right: 2rem; /* separación entre imagen y texto */
+    border-radius: 2rem;
 }
+
+header h1 {
+    margin: 0; /* para evitar espacio extra */
+}
+
+header nav {
+    margin-left: auto;      /* Empuja el nav a la derecha */
+}
+
+header nav a {
+    display: inline-block;     /* IMPORTANTE → permite que se mueva */
+    background: rgb(0, 255, 255);
+    margin: 1rem;
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border: black solid;
+    border-radius: 2rem;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+header nav a:hover {
+    background-color: #e2e1e1;
+    transform: translateY(-5px);   
+}
+
+main {
+  padding: 2rem;
+  margin: 0;
+}
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.contenedor {
+background-color: rgba(255, 255, 255, 0.8);
+width: 80%;
+border: 2px solid rgba(180, 185, 185, 0.2);       /* borde negro difuminado */
+border-radius: 2rem;                        /* esquinas redondeadas */
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* sombra suave y difusa */
+padding: 1rem;                              /* espacio interno */
+backdrop-filter: blur(5px);                 /* difumina lo que está detrás */
+transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+section div:hover {
+    transform: translateY(-2px);                /* ligero “flotamiento” */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25); /* sombra más intensa */
+}
+section h2{
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #000;
+}
+ 
+ section h3 {
+ font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+section h4 {
+font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+/* Aplica a todos los <p> */
+section p {
+    font-size: 1.2rem;          /* Tamaño de letra consistente */
+    line-height: 1.6;         /* Altura de línea para legibilidad */
+    color: #0a0a0a;              /* Color uniforme */
+    text-align: left;         /* Alineación del texto */
+    margin-bottom: 1rem;      /* Espacio entre párrafos */
+}
+
+ section ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+section ul li {
+    margin-bottom: 1rem;
+      font-size: 1.2rem; 
+}
+li span {
+    display: inline-block;    /* ocupa solo su espacio */
+    margin-left: 0.5rem;      /* separación del texto */
+    background-color: #2196f3;
+    color: white;
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    width: 50%;
+}
+
+
+    /* === EDITOR === */
+    .editor-wrapper {
+      margin: 24px 0;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #30363d;
+      display: none;
+      flex-direction: column;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .editor {
+      width: 100%;
+      height: 180px;
+      padding: 16px;
+      background: #000000;
+      color: #c9d1d9;
+      font-family: 'Fira Code', monospace;
+      font-size: 15px;
+      border: none;
+      outline: none;
+      
+      line-height: 1.5;
+    }
+
+    /* === CONSOLA QUOKKA PRO === */
+    .quokka-console {
+      background: var(--bg);
+      color: var(--text);
+      padding: 16px;
+      min-height: 140px;
+      max-height: 320px;
+      overflow-y: auto;
+      font-size: 14.5px;
+      border-top: 1px solid var(--border);
+    }
+
+    .quokka-console.expanded {
+      max-height: 700px;
+    }
+
+    .quokka-line {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 6px 0;
+      padding: 2px 0;
+    }
+
+    .quokka-icon {
+      font-weight: bold;
+      min-width: 22px;
+      text-align: center;
+    }
+
+    .log .quokka-icon { color: var(--log); }
+    .warn .quokka-icon { color: var(--warn); }
+    .error .quokka-icon { color: var(--error); }
+    .info .quokka-icon { color: var(--info); }
+    .success .quokka-icon { color: var(--success); }
+
+    /* === CONTROLES === */
+    .console-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 16px;
+      background: #0d1117;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+    }
+
+    .color-palette {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .color-palette label {
+      color: #8b949e;
+      font-size: 12px;
+    }
+
+    .color-palette input[type="color"] {
+      width: 36px;
+      height: 28px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .btn {
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 13px;
+  
+    }
+
+    .btn-show {
+      background: #238636;
+      color: white;
+    }
+    .btn-show:hover { background: #2ea043; }
+
+    .btn-toggle {
+      background: #30363d;
+      color: #c9d1d9;
+    }
+    .btn-toggle:hover { background: #484f58; }
+
+    .status {
+      color: #7ee787;
+      font-size: 12px;
+    }
