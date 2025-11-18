@@ -22,6 +22,7 @@
     }
     details{
         margin-bottom: 3rem;
+        
     }
     
     .ejemplos{
@@ -40,14 +41,17 @@
         font-size: 2rem;
     }
     input{
-         margin-left: 9rem;
+        margin-left: 9rem;
         font-size: 2rem;       
     }
     .resaltado{
         font-size: 2rem;
         margin-left: 9rem;
     }
-
+ h3, li, div {
+        font-size: 2rem;
+        margin-left: 9rem;
+    }
 
 
 </style>
@@ -102,6 +106,8 @@
             </details>        
 
 
+
+
             <details>
                 <summary>getElementsByClassName()</summary>
                     <details>
@@ -124,24 +130,52 @@
                             <p class="hoverItem">Elemento 2</p>
                             <p class="hoverItem">Elemento 3</p>
                     </details>  
-
-
-
-
-
             </details>        
     
 
 
-
-
-            <details>
+            <details open>
                 <summary>getElementsByTagName()</summary>
+                    <details>
+                        <summary class="ejemplos">Ejemplo 1 <small>(Cambia el color de todos los párrafos)</small></summary>
+                            <p>Primer párrafo</p>
+                            <p>Segundo párrafo</p>
+                            <p>tercer párrafo</p>
+
+                            <button onclick="cambiarColor()">Cambiar color</button>
+                    </details>
+                    
+                    <details open>
+                        <summary class="ejemplos">Ejemplo 2 <small>(Contar cuántos títulos h3 hay)</small></summary>
+                            <h3>Título 1</h3>
+                            <h3>Título 2</h3>
+                            <h3>Título 3</h3>
+
+                            <div id="resultado"></div>
+                    </details>  
+
+                    <details>
+                        <summary class="ejemplos">Ejemplo 3 <small>(Cambiar texto de todos los elementos li)</small></summary>
+                            <ul>
+                                <li>Manzana</li>
+                                <li>Banana</li>
+                                <li>Naranja</li>
+                            </ul>
+
+                            <button onclick="cambiarTexto()">Cambiar nombres</button>
+                    </details> 
             </details>        
 
 
             <details>
                 <summary>getElementsByName()</summary>
+                    <p>Elige un lenguaje:</p>
+                    <input type="radio" name="lenguaje" value="JavaScript"> JavaScript <br>
+                    <input type="radio" name="lenguaje" value="Python"> Python <br>
+                    <input type="radio" name="lenguaje" value="Java"> Java <br>
+
+                    <button onclick="mostrarSeleccion()">Mostrar selección</button>
+                    <p id="resultadoName"></p>
             </details>        
 
 

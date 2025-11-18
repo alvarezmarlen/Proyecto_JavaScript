@@ -65,3 +65,46 @@ for (let i = 0; i < items.length; i++) {
 
 
 
+/* ------------------------------------------------------------------
+            Document.getElementsByTagName()
+--------------------------------------------------------------------*/
+/* Ejemplo 1 */
+function cambiarColor() {
+    //Selleciona todos los elementos p
+    let parrafos = document.getElementsByTagName("p")
+
+    //Recorre todos y cambia su color
+    for (let i = 0; i < parrafos.length; i++) {
+        parrafos[i].style.color = "blue";
+    }
+}
+
+
+/* Ejemplo 2 */
+let titulos = document.getElementsByTagName("h3");
+document.getElementById("resultado").innerHTML = "Hay " + titulos.length + " títulos H3 en la pagina.";
+
+
+/* Ejemplo 3 */
+function cambiarTexto() {
+    let items = document.getElementsByTagName("li");
+    for(let i = 0; i < items.length; i++) {
+        items[i].innerText = "Fruta " + (i+1);
+    }
+}
+
+/* ------------------------------------------------------------------
+            Document.getElementsByName()
+--------------------------------------------------------------------*/
+/* Ejemplo 1 */
+function mostrarSeleccion () {
+    //Selecciona loselementos por su atributo name
+    let opciones = document.getElementsByName("lenguaje")
+
+    //Recorremos todas las opciones
+    for (let i = 0; i < opciones.length; i++) {
+        if (opciones[i].checked) {
+            document.getElementById("resultadoName").innerHTML = "seleccionaste: " + opciones[i].value;   
+        }
+    }
+}
