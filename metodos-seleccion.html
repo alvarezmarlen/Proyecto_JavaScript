@@ -3,24 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Mètodos de Selecciòn</title>
 </head>
 <style>
-    body {
-        background-image:url(assets/img/fondo.png)repeat;
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    .container{
+        font-size: 3rem;
+        margin: 5rem 7rem;
         
     }
+    details{
+        margin-bottom: 3rem;
+    }
+    
+    .ejemplos{
+        margin-left: 6rem;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    p{
+        font-size: 2rem;
+        margin-left: 9rem;
+    }
+
+    button{
+        margin-left: 9rem;
+        font-size: 2rem;
+    }
+
+
+
 </style>
+
+
 <body>
+    <header>
+      <a href="index.html"><img src="assets/img/logo.png" alt="Logo Css"></a>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">☰</label>
+      <nav id="nav-menu">
+      </nav>
+    </header>
     <main>
         <h1>Mètodos de Selecciòn</h1>
 
-        <section>
+        <section class="container">
+            <details>
+                <summary>document.getElementById()</summary>
+                    <details>
+                        <summary class="ejemplos">Ejemplo 1 <small>(Seleccionar un elemento por ID)</small></summary>
+                            <h1 id="saludo"></h1>
+                    </details>                    
+                    
+                    <details>
+                        <summary class="ejemplos">Ejemplo 2 <small>(Obtener un elemento por ID y usar su contenido en otro elemento)</small></summary>
+                            <p id="intro">Cómo encontrar elementos HTML por su ID</p>
+                            <p id="demo"></p>
+                    </details>                    
+                    
+                    <details>
+                        <summary class="ejemplos">Ejemplo 3 <small>(Sin botones, cambio automático al cargar)</small></summary>
+                            <p id="saludos">Hello Mundo</p>
+                    </details>                    
+                    
+                    <details>
+                        <summary class="ejemplos">Ejemplo 4 <small>(Reaccionando a otros eventos: mouseover, click, input, etc.)</small></summary>
+                            <p id="por-encima">Pasa el mouse por encima</p> <!-- hover -->
 
+                            <button id="btnClick">Haz clic aquì</button>
+                            <p id="resClick"></p>
+
+                            <input type="text">
+                    </details> 
+                    
+                    <details>
+                        <summary class="ejemplos">Ejemplo 5<small>(Reaccionando a otros eventos mouseover, hover, input, etc.)</small></summary>
+                            <p id="texto"></p>
+                    </details>
+                    
+
+            </details>        
+
+
+            <details>
+                <summary>getElementsByClassName()</summary>
+            </details>        
+
+
+            <details>
+                <summary>getElementsByTagName()</summary>
+            </details>        
+
+
+            <details>
+                <summary>querySelector()</summary>
+            </details>        
+
+
+            <details>
+                <summary>querySelectorAll()</summary>
+            </details>        
         </section>
+
+
+
+
+
     </main>
 
 
-    
+    <footer>
+      <p>&copy; 2025 Derechos Reservados</p>
+    </footer> 
+    <script src="assets/js/metodos-seleccion.js"></script>   
 </body>
 </html>

@@ -3,110 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Manipulación del DOM</title>
 </head>
-<style>
- /* --------------------------------------------
-   RESET GENERAL Y TIPOGRAFÍA BÁSICA
--------------------------------------------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* Asegura que el padding no sume al ancho */
-}
-
-
-
-body {
-  font-family: 'Open Sans', sans-serif; /* Fuente legible y moderna */
-  line-height: 1.6;
-  color: #333;
-  background-color: #ffffff;
-}
-
-
-/* --------------------------------------------
-   ENLACES
--------------------------------------------- */
-a {
-  text-decoration: none;
-  color: inherit; /* Mismo color que el texto */
-}
-
-/* --------------------------------------------
-   CABECERA
--------------------------------------------- */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3rem;
-  background: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  background-color: #008080;
-}
-
-header img {
-  width: 10%;
-  border-radius: rem;
-}
-header h2 {
-  margin-left: 20%;
-  font-family: 'Open Sans', sans-serif;
-  color: rgb(214, 25, 25); /* Verde natural */
-  font-size: 2rem;
-
-}
-
-nav a {
-  color: white;
-  margin: 0 10px;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #2ce02c;
-}
-
-/* --------------------------------------------
-   MENÚ HAMBURGUESA SOLO CON HTML + CSS
--------------------------------------------- */
-/* Oculta checkbox */
-.menu-toggle {
-  display: none;
-}
-/* Icono de hamburguesa */
-.menu-icon {
-  display: none;
-  font-size: 2em;
-  cursor: pointer;
-  color: #4caf50;
-  padding: 10px 20px;
-}
-
-/* --------------------------------------------
-   PIE DE PÁGINA
--------------------------------------------- */
-footer {
-  background: #008080;
-  color: white;
-  text-align: center;
-  padding: 3rem 3rem;
-}
-footer a {
-  color: #e8f5e9;
-}
-
-
-</style>
 <body>
-
-    <main><h2>hola </h2></main>
-    
 
 <!-- ------------------------------------------------------------
 AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
@@ -117,21 +17,23 @@ AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
       <label for="menu-toggle" class="menu-icon">☰</label>
       <nav id="nav-menu">
         <a href="#">Document Objet Model</a>
-        <a href="#">Mètodos de Selecciòn</a>
+        <a href="metodos-seleccion.html">Mètodos de Selecciòn</a>
         <a href="#">Mètodos de Modificaciòn</a>
         <a href="#">Acceso/Tipado-Parseo/Casteo</a>
       </nav>
     </header>
     <main>
         <h1>BIENVENIDOS A NUESTRA PRESENTACION</h1>
+
+        <div class="portada">
+          <img src="assets/img/portada.webp" alt="">
+        </div>
  
 
     </main> 
 
-        <footer>
+    <footer>
       <p>&copy; 2025 Derechos Reservados</p>
     </footer>
-
-
 </body>
 </html>
