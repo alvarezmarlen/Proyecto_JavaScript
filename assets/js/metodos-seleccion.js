@@ -108,3 +108,34 @@ function mostrarSeleccion () {
         }
     }
 }
+
+/* ------------------------------------------------------------------
+            document.querySelector()
+--------------------------------------------------------------------*/
+/* Ejemplo 1 */
+const titulo = document.querySelector("#titulo");
+const boton = document.querySelector("#boton")
+
+boton.addEventListener("click", ()=> {
+    titulo.textContent = "¡texto cambiando";
+});
+
+/* Ejemplo 2 */
+const parrafo = document.querySelector(".resaltad")
+parrafo.style.color = "yellow"
+
+
+/* Ejemplo 3 */
+const input = document.querySelector("#miInput");
+const boton2 = document.querySelector("#btn");
+boton2.addEventListener("click",() => {
+    alert('El valor del input es: ' + input.value)
+});
+
+
+
+/* Ejemplo 4 */
+const destacado = document.querySelector("li.item.destacado");
+destacado.style.backgroundColor = "yellow";
+
+
