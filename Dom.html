@@ -15,30 +15,32 @@
 
 <div class="Explicacion de que es el Dom"></div>
     <p>Es una interfaz de programación (API) que representa la estructura de un documento HTML 
-    o XML como un árbol de objetos en la memoria.</p>
+    o XML como un árbol de objetos en la memoria.</p> 
 
-    <br>
 <body>
 
     <section class="section1">
+        <div class="Estructura">
         <h1>Ejemplo 1 DOM - Estructura </h1>
-        <table>
-            <rows>
-                <tr>
-                    <td>Coche</td>
-                    <td>Scooter</td>
-                </tr>
-                <tr>
-                    <td>Motociclo</td>
-                    <td>Autobus</td>
-                </tr>
-            </rows>
-        </table>
+<div class="union">
+       <table>
+    <tbody>
+        <tr>
+            <td>Coche</td>
+            <td>Scooter</td>
+        </tr>
+        <tr>
+            <td>Motociclo</td>
+            <td>Autobús</td>
+        </tr>
+    </tbody>
+</table>
+
         <img src="assets/img/Arbol de dom(ejemplo).png" alt="Arbol del DOM">
+    </div>
+        </div>
     </section>
-    <br>
-    <br>
-    <br>
+    
 
     <section>
 
@@ -72,6 +74,66 @@
 
    
   </section>
+  <br>
+  <br>
+
+  <Section>
+
+    <title>Ejemplo innerText vs innerHTML</title>
+
+    <h4>Ejemplo de innerText e innerHTML</h4>
+    <style>
+        body { font-family: sans-serif; margin: 30px; }
+        .box {
+            border: 1px solid #ccc;s
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .inner-text-box { background-color: #e9f5ff; }
+        .inner-html-box { background-color: #f0fff0; }
+        button {
+            padding: 10px 15px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #btnText { background-color: #007bff; color: white; }
+        #btnHtml { background-color: #28a745; color: white; }
+
+        section{
+    padding-bottom: 2rem;
+}
+
+.section1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    
+}
+    </style>
+
+
+
+    <h2>Contenedores Originales</h2>
+
+    <div id="contenedorTexto" class="box inner-text-box">
+        <p>Este es el contenido inicial del **Contenedor TEXTO**.</p>
+        <p>Aquí hay un segundo párrafo.</p>
+    </div>
+
+    <div id="contenedorHTML" class="box inner-html-box">
+        <p>Este es el contenido inicial del **Contenedor HTML**.</p>
+        <p>Aquí hay un segundo párrafo.</p>
+    </div>
+
+    <button id="btnText" onclick="usarInnerText()">Usar innerText (Solo texto)</button>
+    <button id="btnHtml" onclick="usarInnerHTML()">Usar innerHTML (Permite HTML)</button>
+
+    
+  </Section>
    <script src="assets/js/dom.js"></script>
 </body>
 </html>
