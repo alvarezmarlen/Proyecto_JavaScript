@@ -83,17 +83,27 @@
       </div>
 
       <textarea id="code-sec-value">
+ let saludar = {value:"hola"};
+let valor = saludar.value;
+
+console.log(valor)
+
+
+
+
+
+
         const object1 = {
   a: "somestring",
   b: 42,
   c: false,
 };
 
+
 console.log(Object.values(object1));
 // Expected output: Array ["somestring", 42, false]
 
 
-<!--
 function extraerValores(obj) {
   // El uso de Object.values() para obtener un array de los valores
   const valoresArray = Object.values(obj); 
@@ -182,7 +192,23 @@ console.log(typeof 42);        // number
 console.log(typeof "hola");   // string
 console.log(typeof true);     // boolean
 console.log(typeof undefined); // undefined
-console.log(typeof null);     // object (¡clásico!)</textarea>
+console.log(typeof null);     // object (¡clásico!)
+
+console.log("Tipos no primitivos:");
+
+// Objeto
+let persona = { nombre: "Juan", edad: 30 };
+console.log(typeof persona);        // "object"
+
+// Array
+let numeros = [1, 2, 3];
+console.log(typeof numeros);        // "object" (arrays son objetos)
+
+// Función
+function saludar() { return "Hola"; }
+console.log(typeof saludar); 
+
+</textarea>
         <div class="resize-handle" onmousedown="startResize(event, 'sec2')"></div>
         <pre class="salida" id="out-sec2">Salida aparecerá aquí...</pre>
       </div>
@@ -298,7 +324,11 @@ console.log("parseInt →", parseInt(str));
 console.log("parseFloat →", parseFloat("3.14"));
 console.log("Number →", Number(str));
 console.log("coerción →", '5' + 10);
-console.log("truco + →", +"75");</textarea>
+console.log("truco + →", +"75");
+
+
+
+</textarea>
         <div class="resize-handle" onmousedown="startResize(event, 'sec5')"></div>
         <pre class="salida" id="out-sec5">Salida aparecerá aquí...</pre>
       </div>
@@ -432,6 +462,7 @@ console.log("truco + →", +"75");</textarea>
     document.addEventListener('mousemove', doResize);
     document.addEventListener('mouseup', stopResize);
   }
+
 </script>
 
 
