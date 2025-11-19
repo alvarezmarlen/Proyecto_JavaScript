@@ -2,7 +2,7 @@
             Document.getElementById
 --------------------------------------------------------------------*/
 /* Ejemplo1 */
-document.getElementById("saludo").innerHTML = "Hola clase"; 
+document.getElementById("saludo").innerHTML = "Hello mundo!"; 
  
 
 /* Ejemplo 2 */
@@ -98,7 +98,7 @@ function cambiarTexto() {
 --------------------------------------------------------------------*/
 /* Ejemplo 1 */
 function mostrarSeleccion () {
-    //Selecciona loselementos por su atributo name
+    //Selecciona los elementos por su atributo name
     let opciones = document.getElementsByName("lenguaje")
 
     //Recorremos todas las opciones
@@ -133,9 +133,28 @@ boton2.addEventListener("click",() => {
 });
 
 
-
 /* Ejemplo 4 */
 const destacado = document.querySelector("li.item.destacado");
 destacado.style.backgroundColor = "yellow";
+
+
+/* ------------------------------------------------------------------
+            document.querySelectorAll()
+--------------------------------------------------------------------*/
+/* Ejemplo 1 */
+function cambiarColo() {
+    let parrafs = document.querySelectorAll("p");
+    parrafs.forEach(function (p) {
+        p.style.color = "green";
+    });
+}
+
+/* Ejemplo 2 */
+function marcar() {
+    let textos = document.querySelectorAll("#contenedor .texto")
+    textos.forEach(function (texto){
+        texto.style.border = "1px solid red"
+    })
+}
 
 

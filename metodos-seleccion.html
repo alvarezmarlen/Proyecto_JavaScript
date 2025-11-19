@@ -12,25 +12,60 @@
         margin: 0;
         box-sizing: border-box;
     }
+   
     h1{
-        font-size: 3rem;
+    font-size: 3rem;
+    background-color: #e0f0ff;
+    width: 60%;
+    border: 2px solid rgba(180, 185, 185, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 1.5rem;
+    border-radius: 2rem;
+    justify-self: center;
     }
     .container{
         font-size: 3rem;
         margin: 5rem 7rem;
-        
     }
+    .byid{
+    background-color:  #a8d0e6;
+    }
+    .className{
+    background-color: #b7e4c7;
+    }
+    .tagName{
+    background-color: #ffd6a5;
+    }
+    .byName{
+    background-color:  #d6c1f5;
+    }
+    .queryselec{
+    background-color: #ade8f4;
+    }
+    .queryselect{
+    background-color: #fff3b0;
+    }
+
     details{
-        margin-bottom: 3rem;
-        
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 3rem;
+     width: 100%;
+    border: 2px solid rgba(180, 185, 185, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    border-radius: 2rem;
     }
     
     .ejemplos{
         margin-left: 6rem;
         font-size: 2.5rem;
         margin-bottom: 1rem;
+        
     }
-    
+    #saludo{
+        font-size: 3rem;
+        text-align: center;
+    }
     p{
         font-size: 2rem;
         margin-left: 9rem;
@@ -69,11 +104,11 @@
         <h1>Mètodos de Selecciòn</h1>
 
         <section class="container">
-            <details>
+            <details class="byid">
                 <summary>document.getElementById()</summary>
                     <details>
                         <summary class="ejemplos">Ejemplo 1 <small>(Selecciona un elemento por su ID y le cambia el contenido)</small></summary>
-                            <h1 id="saludo"></h1> <!-- EJEMPLO 1 -->
+                            <h2 id="saludo"></h2> <!-- EJEMPLO 1 -->
                     </details>                    
  
                     
@@ -108,7 +143,7 @@
 
 
 
-            <details>
+            <details class="className">
                 <summary>getElementsByClassName()</summary>
                     <details>
                         <summary class="ejemplos">Ejemplo 1 <small>(Cambia el color de todos los elementos con la misma clase)</small></summary>
@@ -134,7 +169,7 @@
     
 
 
-            <details open>
+            <details class="tagName">
                 <summary>getElementsByTagName()</summary>
                     <details>
                         <summary class="ejemplos">Ejemplo 1 <small>(Cambia el color de todos los párrafos)</small></summary>
@@ -167,8 +202,10 @@
             </details>        
 
 
-            <details>
+            <details class="byName">
                 <summary>getElementsByName()</summary>
+                <details>
+                    <summary class="ejemplos">Selecciona los elementos por su atributo name</summary>
                     <p>Elige un lenguaje:</p>
                     <input type="radio" name="lenguaje" value="JavaScript"> JavaScript <br>
                     <input type="radio" name="lenguaje" value="Python"> Python <br>
@@ -176,10 +213,11 @@
 
                     <button onclick="mostrarSeleccion()">Mostrar selección</button>
                     <p id="resultadoName"></p>
+                    </details>
             </details>        
 
 
-            <details>
+            <details class="queryselec">
                 <summary>querySelector()</summary>
                 <details>
                     <summary class="ejemplos">Ejemplo 1 <small>(Selecciona un elemento por ID)</small></summary>
@@ -207,14 +245,28 @@
                         <li class="item destacado">Elemento 3</li>
                     </ul>
                 </details>
-                
-
-
             </details>        
 
 
-            <details>
-                <summary>querySelectorAll()</summary>
+            <details class="queryselect">
+                <summary>querySelectorAll()</summary>                
+                <details>
+                    <summary class="ejemplos">Ejemplo 1 <small>(Cambiar color a todos los párrafos)</small></summary>
+                    <p>Primer párrafo</p>
+                    <p>Segundo párrafo</p>
+                    <p>Tercer párrafo</p>
+                    <button onclick="cambiarColo()">Cambiar color</button>
+                </details> 
+
+                <details>
+                    <summary class="ejemplos">Ejemplo 2 <small>(Seleccionar elementos dentro de un contenedor)</small></summary>
+                    <div id="contenedor">
+                        <p class="texto">Primer párrafo</p>
+                        <p class="texto">Segundo párrafo</p>
+                        <p class="texto">Tercer párrafo</p>
+                    </div>
+                    <button onclick="marcar()">Marcar</button>
+                </details> 
             </details>        
         </section>
 
