@@ -79,9 +79,10 @@ h1 {
 }
 
 .atrib-main {
+    margin-top: 3rem;
     display: flex;
     justify-content: space-between;
-    gap: 35%;
+    gap: 20%;
 }
 
 .atrib-main h2 {
@@ -96,10 +97,6 @@ h1 {
     font-size: 1.3rem;
 }
 
-.div-atrb-main {
-    margin-left: 2rem;
-    font-size: 1.3rem;
-}
 
 
 
