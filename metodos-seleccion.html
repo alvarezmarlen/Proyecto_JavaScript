@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Mètodos de Selecciòn</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    .container{
+        font-size: 3rem;
+        margin: 5rem 7rem;
+        
+    }
+    details{
+        margin-bottom: 3rem;
+        
+    }
+    
+    .ejemplos{
+        margin-left: 6rem;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    p{
+        font-size: 2rem;
+        margin-left: 9rem;
+    }
+
+    button{
+        margin-left: 9rem;
+        font-size: 2rem;
+    }
+    input{
+        margin-left: 9rem;
+        font-size: 2rem;       
+    }
+    .resaltado{
+        font-size: 2rem;
+        margin-left: 9rem;
+    }
+ h3, li, div {
+        font-size: 2rem;
+        margin-left: 9rem;
+    }
+
+
+</style>
+
+
+<body>
+    <header>
+      <a href="index.html"><img src="assets/img/logo.png" alt="Logo Css"></a>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">☰</label>
+      <nav id="nav-menu">
+      </nav>
+    </header>
+    <main>
+        <h1>Mètodos de Selecciòn</h1>
+
+        <section class="container">
+            <details>
+                <summary>document.getElementById()</summary>
+                    <details>
+                        <summary class="ejemplos">Ejemplo 1 <small>(Selecciona un elemento por su ID y le cambia el contenido)</small></summary>
+                            <h1 id="saludo"></h1> <!-- EJEMPLO 1 -->
+                    </details>                    
+ 
+                    
+                    <details>
+                        <summary class="ejemplos">Ejemplo 2 <small>(Obtiene el contenido de un elemento y lo muestra en otro)</small></summary>
+                            <p id="intro">Cómo encontrar elementos HTML por su ID</p>
+                            <p id="demo"></p> <!-- EJEMPLO 2-->
+                    </details>                    
+ 
+                    
+                    <details>
+                        <summary class="ejemplos">Ejemplo 3 <small>(Cambia el color automáticamente al cargar)</small></summary>
+                            <p id="saludos">Hello Mundo</p>  <!-- Cambia a rojo al cargar -->
+                    </details>                    
+ 
+                    
+                    <details>
+                        <summary class="ejemplos">Ejemplo 4 <small>(Reacciona a eventos como hover, click e input)</small></summary>
+                         <!-- EJEMPLOS 4 -->
+                            <p id="por-encima">Pasa el mouse por encima</p> <!-- hover -->
+
+
+                            <button id="btnClick">Haz clic aquì</button>
+                            <p id="resClick"></p>
+
+
+                            <input id="nombre" placeholder="Escribe tu nombre">
+                            <p id="resInput"></p>
+                    </details> 
+            </details>        
+
+
+
+
+            <details>
+                <summary>getElementsByClassName()</summary>
+                    <details>
+                        <summary class="ejemplos">Ejemplo 1 <small>(Cambia el color de todos los elementos con la misma clase)</small></summary>
+                            <h2 class="resaltado">Elemento 1</h2>
+                            <h2 class="resaltado">Elemento 2</h2>
+                            <h2 class="resaltado">Elemento 3</h2>
+                    </details>
+                    
+                    <details>
+                        <summary class="ejemplos">Ejemplo 2 <small>(Cambia el texto de todos los pàrrafos con la misma clase)</small></summary>
+                            <p class="nota">Nota 1</p>
+                            <p class="nota">Nota 2</p>
+                            <p class="nota">Nota 3</p>
+                    </details>  
+
+                    <details>
+                        <summary class="ejemplos">Ejemplo 3 <small>(Cambia el estilo al pasar el mouse (hover) usando solo clase)</small></summary>
+                            <p class="hoverItem">Elemento 1</p>
+                            <p class="hoverItem">Elemento 2</p>
+                            <p class="hoverItem">Elemento 3</p>
+                    </details>  
+            </details>        
+    
+
+
+            <details open>
+                <summary>getElementsByTagName()</summary>
+                    <details>
+                        <summary class="ejemplos">Ejemplo 1 <small>(Cambia el color de todos los párrafos)</small></summary>
+                            <p>Primer párrafo</p>
+                            <p>Segundo párrafo</p>
+                            <p>tercer párrafo</p>
+
+                            <button onclick="cambiarColor()">Cambiar color</button>
+                    </details>
+                    
+                    <details open>
+                        <summary class="ejemplos">Ejemplo 2 <small>(Contar cuántos títulos h3 hay)</small></summary>
+                            <h3>Título 1</h3>
+                            <h3>Título 2</h3>
+                            <h3>Título 3</h3>
+
+                            <div id="resultado"></div>
+                    </details>  
+
+                    <details>
+                        <summary class="ejemplos">Ejemplo 3 <small>(Cambiar texto de todos los elementos li)</small></summary>
+                            <ul>
+                                <li>Manzana</li>
+                                <li>Banana</li>
+                                <li>Naranja</li>
+                            </ul>
+
+                            <button onclick="cambiarTexto()">Cambiar nombres</button>
+                    </details> 
+            </details>        
+
+
+            <details>
+                <summary>getElementsByName()</summary>
+                    <p>Elige un lenguaje:</p>
+                    <input type="radio" name="lenguaje" value="JavaScript"> JavaScript <br>
+                    <input type="radio" name="lenguaje" value="Python"> Python <br>
+                    <input type="radio" name="lenguaje" value="Java"> Java <br>
+
+                    <button onclick="mostrarSeleccion()">Mostrar selección</button>
+                    <p id="resultadoName"></p>
+            </details>        
+
+
+            <details>
+                <summary>querySelector()</summary>
+            </details>        
+
+
+            <details>
+                <summary>querySelectorAll()</summary>
+            </details>        
+        </section>
+
+
+
+
+
+    </main>
+
+
+    <footer>
+      <p>&copy; 2025 Derechos Reservados</p>
+    </footer> 
+    <script src="assets/js/metodos-seleccion.js"></script>   
+</body>
+</html>
