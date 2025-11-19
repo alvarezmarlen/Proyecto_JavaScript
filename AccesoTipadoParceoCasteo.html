@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceso y Tipado - Parseo y Casteo</title>
+  <link rel="stylesheet" href="assets/css/AccesoTipadoParceocasteo.css" />
+
+  <!-- CodeMirror -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/dracula.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/solarized.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/eclipse.min.css">
+</head>
+<body>
+
+<header class="header-principal">
+  <div class="header-contenido">
+    <!-- Logo + Título -->
+    <div class="header-izquierda">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/logo.png" alt="Logo JavaScript" class="logo">
+      </a>
+      <div class="titulo-sitio">
+        <h1>JavaScript <span class="resaltado">DOMinators</span></h1>
+        <p class="subtitulo">Ejemplos interactivos • 100% práctico • Live Code</p>
+      </div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="header-nav">
+      <a href="index.html"class="btn-destacado">Inicio</a>
+      <a href="metodos-seleccion.html"class="btn-destacado">Selección</a>
+      <a href="acceso-tipado-parseo-casteo.html"class="btn-destacado">Acceso y Tipado</a>
+      <a href="eventos.html"class="btn-destacado">Eventos</a>
+      <a href="dom-avanzado.html" class="btn-destacado">DOM Avanzado</a>
+      <a href="proyectos.html" class="btn-destacado">Proyectos</a>
+    </nav>
+
+    <!-- Menú móvil (hamburguesa) -->
+    <button class="menu-toggle" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+
+<!-- ====== SECCIÓN: value en formularios ====== -->
+<section>
+  <div class="contenedor">
+    <h2>El atributo y propiedad .value</h2>
+    <p>El atributo <code>value</code> define el valor inicial de un input. La propiedad JavaScript <code>.value</code> permite leerlo o modificarlo en cualquier momento.</p>
+
+    <h4>Funciona con:</h4>
+    <ul>
+      <li><code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code></li>
+      <li>Tipos: text, number, password, checkbox, radio, etc.</li>
+      <li><code>checkbox.checked</code> → para checkboxes</li>
+    </ul>
+
+    <button class="btn btn-mostrar" onclick="toggleEditor(this, 'sec-value')">Mostrar Editor</button>
+
+    <div class="editor-container" id="sec-value">
+      <div class="editor-header">
+        <div>Tema:
+          <select class="theme-select" onchange="changeTheme('sec-value', this.value)">
+            <option value="monokai">Monokai</option>
+            <option value="dracula">Dracula</option>
+            <option value="solarized light">Solarized</option>
+            <option value="eclipse">Claro</option>
+          </select>
+        </div>
+        <div class="header-controls">
+          <button class="btn btn-live on" onclick="toggleLive('sec-value', this)">Live ON</button>
+          <button class="btn btn-clear" onclick="clearConsole('sec-value')">Limpiar</button>
+          <button class="btn btn-fullscreen" onclick="toggleFullscreen('sec-value', this)">Expandir</button>
+        </div>
+      </div>
+
+      <textarea id="code-sec-value">
+        const object1 = {
+  a: "somestring",
+  b: 42,
+  c: false,
+};
+
+console.log(Object.values(object1));
+// Expected output: Array ["somestring", 42, false]
+
+
+<!--
+function extraerValores(obj) {
+  // El uso de Object.values() para obtener un array de los valores
+  const valoresArray = Object.values(obj); 
+  
+  return valoresArray;
+}
+
+const resultado = extraerValores(object1);
+
+// 2. Mostrar el resultado
+console.log(resultado); 
+// Salida esperada: ["somestring", 42, false]
+
+
+
+        </textarea>
+
+      <div class="resize-handle" onmousedown="startResizeTop(event, 'sec-value')"></div>
+      <pre class="salida" id="out-sec-value">Salida aparecerá aquí...\n¡Ejecuta y juega con los inputs de abajo!</pre>
+      <div class="resize-handle-bottom" onmousedown="startResizeBottom(event, 'sec-value')"></div>
+    </div>
+  </div>
+</section>
+    
+
+  <!-- SECCIÓN 1 -->
+  <section>
+    <div class="contenedor">
+
+        <h2>Tipado Dinamico </h2>
+      <p>JavaScript es un lenguaje de tipado dinámico, variables en JavaScript no están asociadas directamente con ningún tipo de valor en particular, y a cualquier variable se le puede asignar (y reasignar) valores de todos los tipos:</p>
+      <ul>
+        <li>let foo = 42; // número</li>
+        <li>foo = "bar"; // string</li>
+        <li>foo = true; // booleano</li>
+      </ul>
+
+      <button class="btn btn-mostrar" onclick="toggleEditor(this, 'sec1')">Mostrar Editor</button>
+
+      <div class="editor-container" id="sec1">
+        <div class="editor-header">
+          <div>Tema:
+            <select class="theme-select" onchange="changeTheme('sec1', this.value)">
+              <option value="monokai">Monokai</option>
+              <option value="dracula">Dracula</option>
+              <option value="solarized light">Solarized</option>
+              <option value="eclipse">Claro</option>
+            </select>
+          </div>
+          <button class="btn btn-live on" onclick="toggleLive('sec1', this)">Live ON</button>
+        </div>
+        <textarea style="resize: both;" id="code-sec1">let foo = 42;
+console.log("foo es número:", foo);
+foo = "bar";
+console.log("foo es string:", foo);
+foo = true;
+console.log("foo es booleano:", foo);</textarea>
+        <div class="resize-handle" onmousedown="startResize(event, 'sec1')"></div>
+        <pre class="salida" id="out-sec1">Salida aparecerá aquí...</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 2 -->
+  <section>
+    <div class="contenedor">
+      <h2>Estructuras y tipos de datos</h2>
+      <p>El último estándar ECMAScript define nueve tipos...</p>
+
+      <button class="btn btn-mostrar" onclick="toggleEditor(this, 'sec2')">Mostrar Editor</button>
+
+      <div class="editor-container" id="sec2">
+        <div class="editor-header">
+          <div>Tema:
+            <select class="theme-select" onchange="changeTheme('sec2', this.value)">
+              <option value="monokai">Monokai</option>
+              <option value="dracula">Dracula</option>
+              <option value="solarized light">Solarized</option>
+              <option value="eclipse">Claro</option>
+            </select>
+          </div>
+          <button class="btn btn-live on" onclick="toggleLive('sec2', this)">Live ON</button>
+        </div>
+        <textarea id="code-sec2">console.log("Tipos primitivos:");
+console.log(typeof 42);        // number
+console.log(typeof "hola");   // string
+console.log(typeof true);     // boolean
+console.log(typeof undefined); // undefined
+console.log(typeof null);     // object (¡clásico!)</textarea>
+        <div class="resize-handle" onmousedown="startResize(event, 'sec2')"></div>
+        <pre class="salida" id="out-sec2">Salida aparecerá aquí...</pre>
+      </div>
+
+<h4>Datos no primitivos</h4>
+      <p> Los tipos de datos no primitivos en JavaScript son aquellos más complejos que los primitivos, y se agrupan bajo el término
+objeto. Incluyen estructuras como arrays (arreglos), objetos, funciones, y tipos de datos construidos a partir de clases como String, RegExp, Math, Set, etc. A diferencia de los tipos primitivos (string, number, boolean, null, undefined, symbol, bigint), los no primitivos son mutables y se copian por referencia, lo que significa que múltiples variables pueden apuntar al mismo objeto y modificarlo. </p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3 -->
+  <section>
+    <div class="contenedor">
+      <h2>Notación ()</h2>
+      <p>La notación () en JavaScript se usa para...En JavaScript, los paréntesis
+() se utilizan principalmente para llamar funciones y para agrupar operadores y controlar el orden de las operaciones. También se usan en la sintaxis de funciones flecha y para definir parámetros de función</p>
+
+      <button class="btn btn-mostrar" onclick="toggleEditor(this, 'sec3')">Mostrar Editor</button>
+
+      <div class="editor-container" id="sec3">
+        <div class="editor-header">
+          <div>Tema:
+            <select class="theme-select" onchange="changeTheme('sec3', this.value)">
+              <option value="monokai">Monokai</option>
+              <option value="dracula">Dracula</option>
+              <option value="solarized light">Solarized</option>
+              <option value="eclipse">Claro</option>
+            </select>
+          </div>
+          <button class="btn btn-live on" onclick="toggleLive('sec3', this)">Live ON</button>
+        </div>
+        <textarea id="code-sec3">function saludar(nombre) {
+  return "Hola " + nombre;
+}
+console.log(saludar("Mundo"));
+
+let edad = 20;
+let mensaje = (edad >= 18) ? "Mayor de edad" : "Menor";
+console.log(mensaje);
+
+console.log((5 + 3) * 2); // agrupación</textarea>
+        <div class="resize-handle" onmousedown="startResize(event, 'sec3')"></div>
+        <pre class="salida" id="out-sec3">Salida aparecerá aquí...</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 4 -->
+  <section>
+    <div class="contenedor">
+      <h2>Caracteres de Escape</h2>
+      <p>Los caracteres de escape en JavaScript permiten incluir caracteres especiales dentro de una cadena de texto.</p>
+<ul>
+    <li>\n crea un salto de línea (para separar líneas)</li>
+    <li>\t inserta una tabulación horizontal (ideal para alinear columnas)</li>
+    <li>\" sirve para poner comillas dobles dentro de una cadena que ya está entre comillas dobles, </li>
+    <li>\' hace lo mismo con comillas simples, </li>
+    <li>\\ muestra una barra invertida literal sin que se interprete como inicio de otro escape. Gracias a ellos puedes mostrar rutas de Windows</li>
+
+</ul>
+      <button class="btn btn-mostrar" onclick="toggleEditor(this, 'sec4')">Mostrar Editor</button>
+
+      <div class="editor-container" id="sec4">
+        <div class="editor-header">
+          <div>Tema:
+            <select class="theme-select" onchange="changeTheme('sec4', this.value)">
+              <option value="monokai">Monokai</option>
+              <option value="dracula">Dracula</option>
+              <option value="solarized light">Solarized</option>
+              <option value="eclipse">Claro</option>
+            </select>
+          </div>
+          <button class="btn btn-live on" onclick="toggleLive('sec4', this)">Live ON</button>
+        </div>
+        <textarea id="code-sec4">console.log("Línea 1\nLínea 2");
+console.log("Tab\ttabulación");
+console.log("Comillas \"dentro\"");
+console.log('Comillas \'simples\'');
+console.log("Barra invertida \\");</textarea>
+        <div class="resize-handle" onmousedown="startResize(event, 'sec4')"></div>
+        <pre class="salida" id="out-sec4">Salida aparecerá aquí...</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 5 -->
+  <section>
+    <div class="contenedor">
+      <h2>Parseo / Casteo</h2>
+      <h4>Parseo</h4>
+      <p>El parseo “saca” el valor real que está escondido dentro de un texto para que deje de comportarse como letras y empiece a comportarse como número, booleano, objeto, etc.
+Es especialmente útil cuando recibes datos de un formulario, una URL, un archivo o una API, porque casi siempre llegan como strings aunque parezcan números. Sin parsear, las operaciones salen mal; con parseo correcto, todo funciona como esperas.</p>
+<h4>Casteo</h4>
+<p>La diferencia principal entre parseo y casteo en JavaScript es el propósito y la tolerancia a “basura” en el texto: el parseo (con parseInt(), parseFloat() o JSON.parse()) se usa para extraer un valor útil de una cadena que puede contener caracteres extra (como "42px", "$100", "  25 años  "), leyendo solo la parte válida y descartando el resto; en cambio, el casteo (con Number(), String(), Boolean() o el operador +) intenta convertir directamente todo el valor a otro tipo sin ser flexible: si hay cualquier cosa que no encaja (espacios, letras, símbolos), devuelve NaN o un resultado inesperado.Se usa parseo cuando esperas texto sucio y solo quieres rescatar el número u objeto que contiene, y usa casteo cuando el valor ya está limpio o casi limpio y simplemente necesitas cambiarle el tipo.</p>
+
+
+      <button class="btn btn-mostrar" onclick="toggleEditor(this, 'sec5')">Mostrar Editor</button>
+
+      <div class="editor-container" id="sec5">
+        <div class="editor-header">
+          <div>Tema:
+            <select class="theme-select" onchange="changeTheme('sec5', this.value)">
+              <option value="monokai">Monokai</option>
+              <option value="dracula">Dracula</option>
+              <option value="solarized light">Solarized</option>
+              <option value="eclipse">Claro</option>
+            </select>
+          </div>
+          <button class="btn btn-live on" onclick="toggleLive('sec5', this)">Live ON</button>
+        </div>
+        <textarea id="code-sec5">let str = "42";
+console.log("parseInt →", parseInt(str));
+console.log("parseFloat →", parseFloat("3.14"));
+console.log("Number →", Number(str));
+console.log("coerción →", '5' + 10);
+console.log("truco + →", +"75");</textarea>
+        <div class="resize-handle" onmousedown="startResize(event, 'sec5')"></div>
+        <pre class="salida" id="out-sec5">Salida aparecerá aquí...</pre>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-contenido">
+    <div class="footer-logo">
+      <img src="assets/img/logo.png" alt="Logo">
+      <p>Aprende JavaScript<br>paso a paso y con ejemplos reales</p>
+    </div>
+
+    <div class="footer-enlaces">
+      <h4>Navegación rápida</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="metodos-seleccion.html">Métodos de selección</a></li>
+        <li><a href="acceso-tipado-parseo-casteo.html">Acceso y Tipado</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="dom-avanzado.html">DOM Avanzado</a></li>
+      </ul>
+    </div>
+
+  <div class="footer-copy">
+    <p>© <span id="year"></span> Tu Nombre o Proyecto • Hecho con cariño y mucho JavaScript</p>
+  </div>
+</footer>
+
+<!-- CodeMirror JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/javascript/javascript.min.js"></script>
+
+<script>
+  const editors = {};
+  const liveStates = {};
+  const originalLog = console.log;
+
+  function toggleEditor(btn, id) {
+    const container = document.getElementById(id);
+    const visible = container.style.display === 'block';
+
+    if (!visible) {
+      container.style.display = 'block';
+      btn.textContent = 'Ocultar Editor';
+      btn.style.background = '#dc3545';
+
+      if (!editors[id]) {
+        const textarea = document.getElementById('code-' + id);
+        const editor = CodeMirror.fromTextArea(textarea, {
+          lineNumbers: true,
+          mode: 'javascript',
+          theme: 'monokai',
+          indentUnit: 2,
+          tabSize: 2,
+          lineWrapping: true
+        });
+        editor.setSize('100%', 220);
+        editors[id] = editor;
+        liveStates[id] = true;
+
+        editor.on('change', () => {
+          if (liveStates[id]) runCode(id);
+        });
+        runCode(id);
+      }
+    } else {
+      container.style.display = 'none';
+      btn.textContent = 'Mostrar Editor';
+      btn.style.background = '#28a745';
+    }
+  }
+
+  function changeTheme(id, theme) {
+    if (editors[id]) editors[id].setOption('theme', theme);
+  }
+
+  function toggleLive(id, btn) {
+    liveStates[id] = !liveStates[id];
+    btn.textContent = liveStates[id] ? 'Live ON' : 'Live OFF';
+    btn.classList.toggle('on', liveStates[id]);
+    if (liveStates[id]) runCode(id);
+  }
+
+  function runCode(id) {
+    const editor = editors[id];
+    if (!editor) return;
+
+    const code = editor.getValue();
+    const output = document.getElementById('out-' + id);
+    const logs = [];
+
+    output.textContent = '';
+    output.classList.remove('error');
+
+    console.log = (...args) => logs.push(args.join(' '));
+
+    try {
+      new Function(code)();
+      output.textContent = logs.length ? logs.join('\n') : 'Ejecutado sin salida';
+    } catch (err) {
+      output.textContent = `Error: ${err.message}`;
+      output.classList.add('error');
+    } finally {
+      console.log = originalLog;
+    }
+  }
+
+  // Redimensionar editor
+  function startResize(e, id) {
+    e.preventDefault();
+    const container = document.getElementById(id);
+    const startY = e.clientY;
+    const startHeight = container.offsetHeight;
+
+    function doResize(e) {
+      const newHeight = startHeight + (e.clientY - startY);
+      if (newHeight > 150) {
+        const cm = container.querySelector('.CodeMirror');
+        if (cm) cm.style.height = (newHeight - 100) + 'px';
+      }
+    }
+
+    function stopResize() {
+      document.removeEventListener('mousemove', doResize);
+      document.removeEventListener('mouseup', stopResize);
+    }
+
+    document.addEventListener('mousemove', doResize);
+    document.addEventListener('mouseup', stopResize);
+  }
+</script>
+
+
+</body>
+</html>

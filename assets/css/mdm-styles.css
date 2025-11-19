@@ -77,9 +77,10 @@ h1 {
     font-weight: 300;
     font-size: 3rem;
 }
-
+/*  content Leer, Modificar y Eliminar Atributos HTML con JavaScript    */
 .atrib-main {
     margin-top: 3rem;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: space-between;
     gap: 20%;
@@ -92,12 +93,384 @@ h1 {
 }
 
 .atrib-main p {
-    margin-top: 2rem;
+    margin-top: 3rem;
     margin-right: 3rem;
     font-size: 1.3rem;
 }
 
+/*  getAttribute    */
+.getA-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5%;
+}
 
 
+.getA-teory {
+    background-color: #e5e5e5;
+    width: 50%;
+    margin-left: 0.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+}
 
+.getA-teory h2 {
+    font-weight: 1;
+    font-size: 2.5rem;
+}
 
+.getA-teory p {
+    font-size: 1.3rem;
+}
+
+.getA-teory code {
+    font-size: 1rem;
+    line-height: 1.7rem;
+    color:darkblue;
+}
+
+.getA-example {
+    width:50%;
+    background-color: #e5e5e5;
+    margin-right: 0.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+
+}
+
+.getA-example p {
+    font-size: 1.3rem;
+}
+
+/*  setAttribute    */
+.setA-container {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5%;
+}
+
+.setA-teory {
+    background-color: #e5e5e5;
+    width: 50%;
+    margin-left: 0.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.setA-teory h2 {
+    font-weight: 1;
+    font-size: 2.5rem;
+}
+
+.setA-teory p {
+    font-size: 1.3rem;
+}
+
+.setA-teory code {
+    font-size: 1rem;
+    line-height: 1.7rem;
+    color:darkblue;
+}
+
+.setA-example {
+    width:50%;
+    background-color: #e5e5e5;
+    margin-right: 0.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+
+}
+
+.setA-example p {
+    font-size: 1.3rem;
+}
+
+/*  removeAttribute    */
+.remA-container {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5%;
+}
+
+.remA-teory {
+    background-color: #e5e5e5;
+    width: 50%;
+    margin-left: 0.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.remA-teory h2 {
+    font-weight: 1;
+    font-size: 2.5rem;
+}
+
+.remA-teory p {
+    font-size: 1.3rem;
+}
+
+.remA-teory code {
+    font-size: 1rem;
+    line-height: 1.7rem;
+    color:darkblue;
+}
+
+.remA-example {
+    width:50%;
+    background-color: #e5e5e5;
+    margin-right: 0.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+
+}
+
+.remA-example p {
+    font-size: 1.3rem;
+}
+
+/*  hasAttribute    */
+.hasA-container {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5%;
+}
+
+.hasA-teory {
+    background-color: #e5e5e5;
+    width: 50%;
+    margin-left: 0.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.hasA-teory h2 {
+    font-weight: 1;
+    font-size: 2.5rem;
+}
+
+.hasA-teory p {
+    font-size: 1.3rem;
+}
+
+.hasA-teory code {
+    font-size: 1rem;
+    line-height: 1.7rem;
+    color:darkblue;
+}
+
+.hasA-example {
+    width:50%;
+    background-color: #e5e5e5;
+    margin-right: 0.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+
+}
+
+.hasA-example p {
+    font-size: 1.3rem;
+}
+
+/*  Modificar estilos y CSS del DOM con javascript    */
+.modCss-main {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 20%;
+}
+
+.modCss-main h2 {
+    font-weight: 1;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.modCss-main p {
+    margin-top: 3rem;
+    margin-right: 3rem;
+    font-size: 1.3rem;
+}
+
+/*  Modificación directa de estilos CSS    */
+.modDirCss {
+    background-color: #e5e5e5;
+    width: 116rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-left: 0.5rem;
+}
+
+.modDirCss h2 {
+    font-weight: 1;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.modDirCss p {
+    font-size: 1.3rem;
+}
+
+.modDirCss code {
+    font-size: 1rem;
+    line-height: 1.7rem;
+    color:darkblue;
+}
+
+/*  Manipulacion  de clases CSS    */
+.manClassCss {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 20%;
+}
+
+.manClassCss h2 {
+    font-weight: 1;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.manClassCss p {
+    margin-top: 3rem;
+    margin-right: 3rem;
+    font-size: 1.3rem;
+}
+
+/*  add()    */
+.add-container {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5%;
+}
+
+.add-teory {
+    background-color: #e5e5e5;
+    width: 50%;
+    margin-left: 0.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.add-teory h2 {
+    font-weight: 1;
+    font-size: 2.5rem;
+}
+
+.add-teory p {
+    font-size: 1.3rem;
+}
+
+.add-teory code {
+    font-size: 1rem;
+    line-height: 1.7rem;
+    color:darkblue;
+}
+
+.add-example {
+    width:50%;
+    background-color: #e5e5e5;
+    margin-right: 0.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+
+}
+
+.add-example p {
+    font-size: 1.3rem;
+}
+
+/*  remove()    */
+.remo-container {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5%;
+}
+
+.remo-teory {
+    background-color: #e5e5e5;
+    width: 50%;
+    margin-left: 0.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.remo-teory h2 {
+    font-weight: 1;
+    font-size: 2.5rem;
+}
+
+.remo-teory p {
+    font-size: 1.3rem;
+}
+
+.remo-teory code {
+    font-size: 1rem;
+    line-height: 1.7rem;
+    color:darkblue;
+}
+
+.remo-example {
+    width:50%;
+    background-color: #e5e5e5;
+    margin-right: 0.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+
+}
+
+.remo-example p {
+    font-size: 1.3rem;
+}
+
+/*  toggle()    */
+.tog-container {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5%;
+}
+
+.tog-teory {
+    background-color: #e5e5e5;
+    width: 50%;
+    margin-left: 0.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.tog-teory h2 {
+    font-weight: 1;
+    font-size: 2.5rem;
+}
+
+.tog-teory p {
+    font-size: 1.3rem;
+}
+
+.tog-teory code {
+    font-size: 1rem;
+    line-height: 1.7rem;
+    color:darkblue;
+}
+
+.tog-example {
+    width:50%;
+    background-color: #e5e5e5;
+    margin-right: 0.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+
+}
+
+.tog-example p {
+    font-size: 1.3rem;
+}
