@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/mdm-styles.css">
+</head>
+   <!-- NAV BLANCA SUPERIOR -->
+    <nav class="navwhite-top">
+        <div class="nav-left">
+            <img src="assets/img/logo demo-2.2.1.png" alt="logo-icon">
+        </div>
+
+        <ul class="nav-menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">De Atributos</a></li>
+            <li><a href="#">De Reglas Css</a></li>
+        </ul>
+    </nav>
+
+    <div class="navblack-bottom">
+        <span>DOMINATORS</span>
+    </div>
+    <header class="header-video">
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="assets/img/dom-background.mp4" type="video/mp4">
+    </video>
+    <h1>Metodos de Modificacion.</h1>
+</header>
+<section class="atrib-main">
+    <h2>Leer, Modificar y Eliminar Atributos HTML con JavaScript</h2>
+    <p>
+        Con los métodos <strong>getAttribute(), setAttribute() y removeAttribute()
+        </strong> podremos trabajar con atributos HTML.
+    </p> 
+</section>
+<section class="getA-container">
+    <div class="getA-teory">
+        <h2>Leer Atributos <strong>getAttribute()</strong></h2>
+        <p>
+            Acceder al valor original de un atributo tal como fue escrito en el HTML.
+        </p>
+        <p>
+            Por ejemplo,<br>
+        </p>
+            <code>
+                &lt;a id="link" href="https://ejemplo.com" target="_blank"&gt;Ir a ejemplo&lt;/a&gt;
+            </code>
+        <p>
+            Podemos obtener sus atributos usando, 
+            <br>
+            JavaScript:
+        </p>
+        <code>
+            const enlace = document.getElementById("link"); <br>
+            const url = enlace.getAttribute("href");   // "https://ejemplo.com" <br>
+            const target = enlace.getAttribute("target"); // "_blank"
+        </code>
+    </div>
+    <div class="getA-example">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ipsum sunt? Illum minima mollitia ex molestias repellendus officia cumque corporis! Unde aspernatur explicabo alias est nisi ad a itaque sequi?
+            Beatae sint optio id natus quam ex aut laboriosam quaerat dolorem non dicta porro delectus animi soluta hic quas neque voluptate amet architecto tenetur sunt, maiores est voluptates! Earum, magni.
+        </p>
+    </div>
+</section>
+<section class="setA-container">
+    <div class="setA-teory">
+        <h2>Modificar o agregar Atributos <strong>SetAttribute()</strong></h2>
+        <p>
+            Cambiar el valor de un atributo existente o añadir uno nuevo. <br>
+            <strong>Nombre del atributo y el valor que queremos asignar.</strong>
+        </p>
+        <p>
+            Un ejemplo seria para modificar atributos existentes,
+        </p>
+        <code>
+            &lt;img id="logo" src="logo.png" alt="Logo anterior"&gt;
+        </code>
+        <p>
+            En JavaScript, 
+        </p>
+        <code>
+            const logo = document.getElementById("logo");<br>
+            logo.setAttribute("alt", "Logo actualizado");
+        </code>
+    </div>
+    <div class="setA-example">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ipsum sunt? Illum minima mollitia ex molestias repellendus officia cumque corporis! Unde aspernatur explicabo alias est nisi ad a itaque sequi?
+            Beatae sint optio id natus quam ex aut laboriosam quaerat dolorem non dicta porro delectus animi soluta hic quas neque voluptate amet architecto tenetur sunt, maiores est voluptates! Earum, magni.
+        </p>
+    </div>
+</section>
+<section class="remA-container">
+    <div class="remA-teory">
+        <h2>Eliminar elementos con <strong>RemoveAttribute()</strong></h2>
+        <p>
+            <Strong>Elimina</Strong> un atributo completamente del HTML cuando ya no es necesario
+        </p>
+        <p>
+            Por ejemplo,
+        </p>
+        <code>
+            &lt;input id="correo" type="email" required&gt;
+        </code>
+        <p>
+            Si luego deseas permitir enviar el formulario sin ese campo, puedes eliminar el atributo requied, así: 
+        </p>
+        <code>
+            const campo = document.getElementById("correo");<br>
+            campo.removeAttribute("required");
+        </code>
+        <p>
+            Eliminar un atributo no solo cambia el HTML, sino que también puede impactar directamente en el comportamiento del elemento.
+        </p>
+    </div>
+    <div class="remA-example">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ipsum sunt? Illum minima mollitia ex molestias repellendus officia cumque corporis! Unde aspernatur explicabo alias est nisi ad a itaque sequi?
+            Beatae sint optio id natus quam ex aut laboriosam quaerat dolorem non dicta porro delectus animi soluta hic quas neque voluptate amet architecto tenetur sunt, maiores est voluptates! Earum, magni.
+        </p>
+    </div>
+</section>
+<section class="hasA-container">
+    <div class="hasA-teory">
+        <h2>Muestra un booleano <strong>hasAttribute()</strong></h2>
+        <p>
+            Por ejemplo,
+        </p>
+        <code>
+            &lt;id="texto" class="importante">Hola&lt;
+        </code>
+        <p>
+            En JavaScript,
+        </p>
+        <code>
+            let p = document.getElementById("texto");<br>
+            console.log(p.hasAttribute("class"));  // true <br>
+            console.log(p.hasAttribute("style"));  // false
+        </code>
+        <p>
+            Tiene la clase → true <br>
+            No tiene el atributo style → false
+        </p>
+    </div>
+    <div class="hasA-example">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ipsum sunt? Illum minima mollitia ex molestias repellendus officia cumque corporis! Unde aspernatur explicabo alias est nisi ad a itaque sequi?
+            Beatae sint optio id natus quam ex aut laboriosam quaerat dolorem non dicta porro delectus animi soluta hic quas neque voluptate amet architecto tenetur sunt, maiores est voluptates! Earum, magni.
+        </p>
+    </div>
+</section>
+<section class="modCss-main">
+    <h2>Modificar estilos y CSS del DOM con javascript</h2>
+    <p>
+        Modificcion de los estilos, tanto <strong>directa, o por clase.</strong>
+    </p> 
+</section>
+<section class="modDirCss">
+    <h2>Modificación directa de estilos CSS</h2>
+    <p>
+        Utilizando la propiedad <strong>style </strong>el elemento y asignando valores a las propiedades CSS.
+    </p> 
+    <p>
+        Comando = elemento.style.propiedadCSS = 'valor'
+    </p>
+    <p>
+        Ejemplo,
+    </p>
+    <code>
+        &lt;div id="caja">Hola mundo/div&lt; <br><br>
+        const caja = document.getElementById("caja");<br>
+        caja.style.color = "white";<br>
+        caja.style.backgroundColor = "blue";<br>
+        caja.style.padding = "20px";<br>
+        caja.style.fontSize = "24px";<br>
+    </code>
+
+</section>
+<section class="manClassCss">
+    <h2>Manipulación de Clases CSS</h2>
+    <p>
+        Utilizamos las propiedades <strong>classList</strong> del elemento para agregar, eliminar o alternar clases.
+    </p> 
+</section>
+<section class="add-container">
+    <div class="add-teory">
+        <h2>add()</h2>
+        <p>
+            <strong>Añade</strong> una o más clases a un elemento.
+            <br>
+            Por ejemplo, <br>
+        </p>
+        <code>
+            &lt;div id="caja"&gt;Soy una caja&lt;/div&gt;<br>
+            &lt;button id="btnAdd"&gt;Agregar clase&lt;/button&gt;
+        </code>
+        <p>
+            En Css,
+        </p>
+        <code>
+            .rojo { <br>
+            background: red; <br>
+            color: white; <br>
+            padding: 10px; <br>
+            }
+        </code>
+        <p>
+            En JavaScript,
+        </p>
+        <code>
+            const caja = document.getElementById("caja"); <br>
+            const btnAdd = document.getElementById("btnAdd"); <br><br>
+
+            btnAdd.addEventListener("click", () => { <br>
+            caja.classList.add("rojo");<br>
+            });
+        </code>
+    </div>
+    <div class="add-example">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ipsum sunt? Illum minima mollitia ex molestias repellendus officia cumque corporis! Unde aspernatur explicabo alias est nisi ad a itaque sequi?
+            Beatae sint optio id natus quam ex aut laboriosam quaerat dolorem non dicta porro delectus animi soluta hic quas neque voluptate amet architecto tenetur sunt, maiores est voluptates! Earum, magni.
+        </p>
+    </div>
+</section>
+<section class="remo-container">
+    <div class="remo-teory">
+        <h2>remove()</h2>
+        <p>
+           <strong>Elimina</strong> una o más clases de un elemento.
+            <br>
+            Por ejemplo quitar una clase de un elemento,<br>
+        </p>
+        <code>
+            &lt;div id="caja" class="activo"&gt;Caja con clase inicial&lt;/div&gt; <br>
+            &lt;button id="btnRemove"&gt;Quitar clase&lt;/button&gt;
+        </code>
+        <p>
+            En Css,
+        </p>
+        <code>
+            .activo { <br>
+            border: 3px solid green; <br>
+            padding: 10px; <br>
+            }
+        </code>
+        <p>
+            En JavaScript,
+        </p>
+        <code>
+            const caja = document.getElementById("caja"); <br>
+            const btnRemove = document.getElementById("btnRemove"); <br>
+            btnRemove.addEventListener("click", () => { <br>
+            caja.classList.remove("activo"); <br>
+            });
+        </code>
+    </div>
+    <div class="remo-example">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ipsum sunt? Illum minima mollitia ex molestias repellendus officia cumque corporis! Unde aspernatur explicabo alias est nisi ad a itaque sequi?
+            Beatae sint optio id natus quam ex aut laboriosam quaerat dolorem non dicta porro delectus animi soluta hic quas neque voluptate amet architecto tenetur sunt, maiores est voluptates! Earum, magni.
+        </p>
+    </div>
+</section>
+<section class="tog-container">
+    <div class="tog-teory">
+        <h2>toggle()</h2>
+        <p>
+          Si la clase <strong>no está,</strong> la agrega, y <strong>si ya está,</strong> la quita.
+            <br>
+            Por ejemplo,<br>
+        </p>
+        <code>
+            &lt;div id="caja"&gt;Pasa el mouse o haz clic&lt;/div&gt; <br>
+            &lt;button id="btnToggle"&gt;Alternar clase&lt;/button&gt;
+        </code>
+        <p>
+            En Css,
+        </p>
+        <code>
+            .resaltado { <br>
+            background: yellow; <br>
+            border: 2px solid orange; <br>
+            transform: scale(1.1); <br>
+            transition: 0.2s; <br>
+            } <br>
+        </code>
+        <p>
+            En JavaScript,
+        </p>
+        <code>
+            const caja = document.getElementById("caja"); <br>
+            const btnToggle = document.getElementById("btnToggle"); <br>
+            btnToggle.addEventListener("click", () => { <br>
+            caja.classList.toggle("resaltado"); <br>
+            }); 
+        </code>
+    </div>
+    <div class="remo-example">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ipsum sunt? Illum minima mollitia ex molestias repellendus officia cumque corporis! Unde aspernatur explicabo alias est nisi ad a itaque sequi?
+            Beatae sint optio id natus quam ex aut laboriosam quaerat dolorem non dicta porro delectus animi soluta hic quas neque voluptate amet architecto tenetur sunt, maiores est voluptates! Earum, magni.
+        </p>
+    </div>
+</section>
+<body>
+<script src="assets/js/mdm-script.js"></script>    
+</body>
+</html>

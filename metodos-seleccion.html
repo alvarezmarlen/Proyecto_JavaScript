@@ -22,6 +22,7 @@
     }
     details{
         margin-bottom: 3rem;
+        
     }
     
     .ejemplos{
@@ -39,7 +40,18 @@
         margin-left: 9rem;
         font-size: 2rem;
     }
-
+    input{
+        margin-left: 9rem;
+        font-size: 2rem;       
+    }
+    .resaltado{
+        font-size: 2rem;
+        margin-left: 9rem;
+    }
+ h3, li, div {
+        font-size: 2rem;
+        margin-left: 9rem;
+    }
 
 
 </style>
@@ -60,52 +72,144 @@
             <details>
                 <summary>document.getElementById()</summary>
                     <details>
-                        <summary class="ejemplos">Ejemplo 1 <small>(Seleccionar un elemento por ID)</small></summary>
-                            <h1 id="saludo"></h1>
+                        <summary class="ejemplos">Ejemplo 1 <small>(Selecciona un elemento por su ID y le cambia el contenido)</small></summary>
+                            <h1 id="saludo"></h1> <!-- EJEMPLO 1 -->
                     </details>                    
+ 
                     
                     <details>
-                        <summary class="ejemplos">Ejemplo 2 <small>(Obtener un elemento por ID y usar su contenido en otro elemento)</small></summary>
+                        <summary class="ejemplos">Ejemplo 2 <small>(Obtiene el contenido de un elemento y lo muestra en otro)</small></summary>
                             <p id="intro">Cómo encontrar elementos HTML por su ID</p>
-                            <p id="demo"></p>
+                            <p id="demo"></p> <!-- EJEMPLO 2-->
                     </details>                    
+ 
                     
                     <details>
-                        <summary class="ejemplos">Ejemplo 3 <small>(Sin botones, cambio automático al cargar)</small></summary>
-                            <p id="saludos">Hello Mundo</p>
+                        <summary class="ejemplos">Ejemplo 3 <small>(Cambia el color automáticamente al cargar)</small></summary>
+                            <p id="saludos">Hello Mundo</p>  <!-- Cambia a rojo al cargar -->
                     </details>                    
+ 
                     
                     <details>
-                        <summary class="ejemplos">Ejemplo 4 <small>(Reaccionando a otros eventos: mouseover, click, input, etc.)</small></summary>
+                        <summary class="ejemplos">Ejemplo 4 <small>(Reacciona a eventos como hover, click e input)</small></summary>
+                         <!-- EJEMPLOS 4 -->
                             <p id="por-encima">Pasa el mouse por encima</p> <!-- hover -->
+
 
                             <button id="btnClick">Haz clic aquì</button>
                             <p id="resClick"></p>
 
-                            <input type="text">
-                    </details> 
-                    
-                    <details>
-                        <summary class="ejemplos">Ejemplo 5<small>(Reaccionando a otros eventos mouseover, hover, input, etc.)</small></summary>
-                            <p id="texto"></p>
-                    </details>
-                    
 
+                            <input id="nombre" placeholder="Escribe tu nombre">
+                            <p id="resInput"></p>
+                    </details> 
             </details>        
+
+
 
 
             <details>
                 <summary>getElementsByClassName()</summary>
+                    <details>
+                        <summary class="ejemplos">Ejemplo 1 <small>(Cambia el color de todos los elementos con la misma clase)</small></summary>
+                            <h2 class="resaltado">Elemento 1</h2>
+                            <h2 class="resaltado">Elemento 2</h2>
+                            <h2 class="resaltado">Elemento 3</h2>
+                    </details>
+                    
+                    <details>
+                        <summary class="ejemplos">Ejemplo 2 <small>(Cambia el texto de todos los pàrrafos con la misma clase)</small></summary>
+                            <p class="nota">Nota 1</p>
+                            <p class="nota">Nota 2</p>
+                            <p class="nota">Nota 3</p>
+                    </details>  
+
+                    <details>
+                        <summary class="ejemplos">Ejemplo 3 <small>(Cambia el estilo al pasar el mouse (hover) usando solo clase)</small></summary>
+                            <p class="hoverItem">Elemento 1</p>
+                            <p class="hoverItem">Elemento 2</p>
+                            <p class="hoverItem">Elemento 3</p>
+                    </details>  
+            </details>        
+    
+
+
+            <details open>
+                <summary>getElementsByTagName()</summary>
+                    <details>
+                        <summary class="ejemplos">Ejemplo 1 <small>(Cambia el color de todos los párrafos)</small></summary>
+                            <p>Primer párrafo</p>
+                            <p>Segundo párrafo</p>
+                            <p>tercer párrafo</p>
+
+                            <button onclick="cambiarColor()">Cambiar color</button>
+                    </details>
+                    
+                    <details open>
+                        <summary class="ejemplos">Ejemplo 2 <small>(Contar cuántos títulos h3 hay)</small></summary>
+                            <h3>Título 1</h3>
+                            <h3>Título 2</h3>
+                            <h3>Título 3</h3>
+
+                            <div id="resultado"></div>
+                    </details>  
+
+                    <details>
+                        <summary class="ejemplos">Ejemplo 3 <small>(Cambiar texto de todos los elementos li)</small></summary>
+                            <ul>
+                                <li>Manzana</li>
+                                <li>Banana</li>
+                                <li>Naranja</li>
+                            </ul>
+
+                            <button onclick="cambiarTexto()">Cambiar nombres</button>
+                    </details> 
             </details>        
 
 
             <details>
-                <summary>getElementsByTagName()</summary>
+                <summary>getElementsByName()</summary>
+                    <p>Elige un lenguaje:</p>
+                    <input type="radio" name="lenguaje" value="JavaScript"> JavaScript <br>
+                    <input type="radio" name="lenguaje" value="Python"> Python <br>
+                    <input type="radio" name="lenguaje" value="Java"> Java <br>
+
+                    <button onclick="mostrarSeleccion()">Mostrar selección</button>
+                    <p id="resultadoName"></p>
             </details>        
 
 
             <details>
                 <summary>querySelector()</summary>
+                <details>
+                    <summary class="ejemplos">Ejemplo 1 <small>(Selecciona un elemento por ID)</small></summary>
+                    <h1 id="titulo">Hola, mundo</h1>
+                    <button id="boton">Cambiar texto</button>
+                </details>
+                
+                <details>
+                    <summary class="ejemplos">Ejemplo 2 <small>(Selecciona un elemento por clase)</small></summary>
+                    <p class="resaltad">Este es un párrafo resaltado</p>
+                    <p>Otro párrafo normal</p>
+                </details> 
+                
+                <details>
+                    <summary class="ejemplos">Ejemplo 3 <small>(Seleccionar un input usando un atributo)</small></summary>
+                    <input type="text" id="miInput" placeholder="Escribe algo aquí">                    
+                    <button id="btn">Mostrar valor</button>
+                </details>
+                
+                <details>
+                    <summary class="ejemplos">Ejemplo 4 <small>(Combinar selectores para seleccionar elementos específicos)</small></summary>
+                    <ul>
+                        <li class="item">Elemento 1</li>
+                        <li class="item">Elemento 2</li>
+                        <li class="item destacado">Elemento 3</li>
+                    </ul>
+                </details>
+                
+
+
             </details>        
 
 
