@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
 body {
+    background-color: #F5F5F7;
     margin: 0;
     font-family: "Inter", sans-serif;
     color: #111;
@@ -172,11 +173,14 @@ h1 {
 
 
 .getA-teory {
-    background-color: #e5e5e5;
     width: 50%;
     margin-left: 0.5rem;
     padding: 1rem;
     border-radius: 4px;
+    background-color: white;
+    box-shadow: 
+    0 2px 5px rgba(0,0,0,0.05),
+    0 4px 15px rgba(0,0,0,0.08);
 }
 
 .getA-teory h2 {
@@ -196,11 +200,13 @@ h1 {
 
 .getA-example {
     width:50%;
-    background-color: #e5e5e5;
     margin-right: 0.5rem;
     padding: 1rem;
     border-radius: 4px;
-
+    background-color: white;
+    box-shadow: 
+    0 2px 5px rgba(0,0,0,0.05),
+    0 4px 15px rgba(0,0,0,0.08);
 }
 
 .getA-example p {
@@ -221,11 +227,14 @@ h1 {
 }
 
 .setA-teory {
-    background-color: #e5e5e5;
     width: 50%;
     margin-left: 0.5rem;
     padding: 1rem;
     border-radius: 4px;
+    background-color: white;
+    box-shadow: 
+    0 2px 5px rgba(0,0,0,0.05),
+    0 4px 15px rgba(0,0,0,0.08);
 }
 
 .setA-teory h2 {
@@ -245,10 +254,13 @@ h1 {
 
 .setA-example {
     width:50%;
-    background-color: #e5e5e5;
     margin-right: 0.5rem;
     padding: 1rem;
     border-radius: 4px;
+    background-color: white;
+    box-shadow: 
+    0 2px 5px rgba(0,0,0,0.05),
+    0 4px 15px rgba(0,0,0,0.08);
 
 }
 
@@ -270,11 +282,14 @@ h1 {
 }
 
 .remA-teory {
-    background-color: #e5e5e5;
     width: 50%;
     margin-left: 0.5rem;
     padding: 1rem;
     border-radius: 4px;
+    background-color: white;
+    box-shadow: 
+    0 2px 5px rgba(0,0,0,0.05),
+    0 4px 15px rgba(0,0,0,0.08);
 }
 
 .remA-teory h2 {
@@ -294,11 +309,13 @@ h1 {
 
 .remA-example {
     width:50%;
-    background-color: #e5e5e5;
     margin-right: 0.5rem;
     padding: 1rem;
     border-radius: 4px;
-
+    background-color: white;
+    box-shadow: 
+    0 2px 5px rgba(0,0,0,0.05),
+    0 4px 15px rgba(0,0,0,0.08);
 }
 
 .remA-example p {
@@ -314,11 +331,14 @@ h1 {
 }
 
 .hasA-teory {
-    background-color: #e5e5e5;
     width: 50%;
     margin-left: 0.5rem;
     padding: 1rem;
     border-radius: 4px;
+    background-color: white;
+    box-shadow: 
+    0 2px 5px rgba(0,0,0,0.05),
+    0 4px 15px rgba(0,0,0,0.08);
 }
 
 .hasA-teory h2 {
@@ -338,14 +358,66 @@ h1 {
 
 .hasA-example {
     width:50%;
-    background-color: #e5e5e5;
     margin-right: 0.5rem;
     padding: 1rem;
     border-radius: 4px;
-
+    background-color: white;
+    box-shadow: 
+    0 2px 5px rgba(0,0,0,0.05),
+    0 4px 15px rgba(0,0,0,0.08);
 }
 
 .hasA-example p {
+    font-size: 1.3rem;
+}
+
+/*  addEventListener()    */
+.eveLis-container {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5%;
+}
+
+.eveLis-teory {
+    width: 50%;
+    margin-left: 0.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 
+    0 2px 5px rgba(0,0,0,0.05),
+    0 4px 15px rgba(0,0,0,0.08);
+}
+
+.eveLis-teory h2 {
+    font-weight: 1;
+    font-size: 2.5rem;
+}
+
+.eveLis-teory p {
+    font-size: 1.3rem;
+}
+
+.eveLis-teory code {
+    font-size: 1rem;
+    line-height: 1.7rem;
+    color:darkblue;
+}
+
+.eveLis-example {
+    width:50%;
+    margin-right: 0.5rem;
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 
+    0 2px 5px rgba(0,0,0,0.05),
+    0 4px 15px rgba(0,0,0,0.08);
+
+}
+
+.eveLis-example p {
     font-size: 1.3rem;
 }
 
@@ -372,13 +444,16 @@ h1 {
 
 /*  Modificación directa de estilos CSS    */
 .modDirCss {
-    background-color: #e5e5e5;
     width: 116rem;
     margin-top: 3rem;
     margin-bottom: 2rem;
     padding: 1rem;
     border-radius: 4px;
     margin-left: 0.5rem;
+    background-color: white;
+    box-shadow: 
+    0 2px 5px rgba(0,0,0,0.05),
+    0 4px 15px rgba(0,0,0,0.08);
 }
 
 .modDirCss h2 {
@@ -427,11 +502,14 @@ h1 {
 }
 
 .add-teory {
-    background-color: #e5e5e5;
     width: 50%;
     margin-left: 0.5rem;
     padding: 1rem;
     border-radius: 4px;
+    background-color: white;
+    box-shadow: 
+    0 2px 5px rgba(0,0,0,0.05),
+    0 4px 15px rgba(0,0,0,0.08);
 }
 
 .add-teory h2 {
@@ -451,16 +529,24 @@ h1 {
 
 .add-example {
     width:50%;
-    background-color: #e5e5e5;
     margin-right: 0.5rem;
     padding: 1rem;
     border-radius: 4px;
-
+    background-color: white;
+    box-shadow: 
+    0 2px 5px rgba(0,0,0,0.05),
+    0 4px 15px rgba(0,0,0,0.08);
 }
 
 .add-example p {
     font-size: 1.3rem;
 }
+
+.important {
+    background-color: yellow;
+    font-weight: bold;
+}
+
 
 /*  remove()    */
 .remo-container {
@@ -471,11 +557,14 @@ h1 {
 }
 
 .remo-teory {
-    background-color: #e5e5e5;
     width: 50%;
     margin-left: 0.5rem;
     padding: 1rem;
     border-radius: 4px;
+    background-color: white;
+    box-shadow: 
+    0 2px 5px rgba(0,0,0,0.05),
+    0 4px 15px rgba(0,0,0,0.08);
 }
 
 .remo-teory h2 {
@@ -495,15 +584,22 @@ h1 {
 
 .remo-example {
     width:50%;
-    background-color: #e5e5e5;
     margin-right: 0.5rem;
     padding: 1rem;
     border-radius: 4px;
-
+    background-color: white;
+    box-shadow: 
+    0 2px 5px rgba(0,0,0,0.05),
+    0 4px 15px rgba(0,0,0,0.08);
 }
 
 .remo-example p {
     font-size: 1.3rem;
+}
+
+.tachado {
+    text-decoration: line-through;
+    color: gray;
 }
 
 /*  toggle()    */
@@ -515,11 +611,14 @@ h1 {
 }
 
 .tog-teory {
-    background-color: #e5e5e5;
     width: 50%;
     margin-left: 0.5rem;
     padding: 1rem;
     border-radius: 4px;
+    background-color: white;
+    box-shadow: 
+    0 2px 5px rgba(0,0,0,0.05),
+    0 4px 15px rgba(0,0,0,0.08);
 }
 
 .tog-teory h2 {
@@ -539,58 +638,21 @@ h1 {
 
 .tog-example {
     width:50%;
-    background-color: #e5e5e5;
     margin-right: 0.5rem;
     padding: 1rem;
     border-radius: 4px;
-
+    transition: 0.3s;
+    background-color: white;
+    box-shadow: 
+    0 2px 5px rgba(0,0,0,0.05),
+    0 4px 15px rgba(0,0,0,0.08);
+}
+.dark {
+    background-color: #222;
+    color: white;
 }
 
 .tog-example p {
-    font-size: 1.3rem;
-}
-
-/*  addEventListener()    */
-.eveLis-container {
-    margin-top: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-    gap: 0.5%;
-}
-
-.eveLis-teory {
-    background-color: #e5e5e5;
-    width: 50%;
-    margin-left: 0.5rem;
-    padding: 1rem;
-    border-radius: 4px;
-}
-
-.eveLis-teory h2 {
-    font-weight: 1;
-    font-size: 2.5rem;
-}
-
-.eveLis-teory p {
-    font-size: 1.3rem;
-}
-
-.eveLis-teory code {
-    font-size: 1rem;
-    line-height: 1.7rem;
-    color:darkblue;
-}
-
-.eveLis-example {
-    width:50%;
-    background-color: #e5e5e5;
-    margin-right: 0.5rem;
-    padding: 1rem;
-    border-radius: 4px;
-
-}
-
-.eveLis-example p {
     font-size: 1.3rem;
 }
 

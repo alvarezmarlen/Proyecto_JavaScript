@@ -26,12 +26,12 @@ boton3.addEventListener("click", function() {
 
 /* hasAttribute */
 const boton4 = document.getElementById("miBoton");
-const verificar = document.getElementById("verificar");
+const verificar1 = document.getElementById("verificar");
 const mensaje = document.getElementById("mensaje");
 
-verificar.addEventListener("click", function() {
+verificar1.addEventListener("click", function() {
 
-    if (boton4.hasAttribute("disable")) {
+    if (boton4.hasAttribute("disabled")) {
         mensaje.textContent = "Sí, el botón está deshabilitado.";
     } else {
         mensaje.textContent = "No, el botón no tiene el atributo disabled.";
@@ -45,6 +45,32 @@ const mensaje2 = document.getElementById("mensaje2");
 boton5.addEventListener("click", function() {
     mensaje2.textContent = "¡Hiciste clic en el botón!";
 });
+
+/* add() */
+const parrafo = document.getElementById("parrafoAdd");
+const btnAdd1 = document.getElementById("btnAdd");
+
+btnAdd1.addEventListener("click", function() {
+    parrafo.classList.add("important");
+});
+
+/* remove() */
+const item = document.getElementById("itemRemove");
+const btnRemove = document.getElementById("btnRemove");
+
+btnRemove.addEventListener("click", function() {
+    item.classList.remove("tachado");
+});
+
+/* toggle() */
+const boton9 = document.getElementById("modo");
+const caja9 = document.querySelector(".tog-example");
+
+boton9.addEventListener("click", function() {
+    caja9.classList.toggle("dark");
+});
+
+
 
 
 

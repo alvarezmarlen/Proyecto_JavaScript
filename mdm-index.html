@@ -35,7 +35,7 @@ AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
     <video autoplay muted loop playsinline class="bg-video">
         <source src="assets/img/dom-background.mp4" type="video/mp4">
     </video>
-    <h1>Metodos de Modificacion.</h1>
+    <h1>Métodos de Modificación</h1>
 </header>
 <section class="atrib-main">
     <h2>Leer, Modificar y Eliminar Atributos HTML con JavaScript</h2>
@@ -143,7 +143,7 @@ AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
             Por ejemplo,
         </p>
         <code>
-            &lt;id="texto" class="importante">Hola&lt;
+            &lt;p id="texto" class="importante"&gt;Hola&lt;/p&gt;
         </code>
         <p>
             En JavaScript,
@@ -162,9 +162,9 @@ AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
         <p>
             Verificar si un botón tiene el atributo <strong>disabled.</strong>
         </p>
-        <button id="miBoton" disabled>Botón deshabilitado</button>
-        <p id="mensaje"></p>
+        <button id="miBoton" disabled>Botón objetivo</button>
         <button id="verificar">Verificar atributo</button>
+        <p id="mensaje"></p>
     </div>
 </section>
 <section class="eveLis-container">
@@ -173,22 +173,7 @@ AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
         <p>
             Toma el <strong>evento</strong> y lo pone a <strong>escuchar.</strong><br>
             Sintaxis: <code>element.addEventListener (event, listener);</code><br>
-            Ejemplo,
         </p>
-        <code>
-            &lt;button id="miBoton"&gt;Haz clic aquí&lt;/button&gt; <br>
-            &lt;p id="mensaje"&gt;&lt;/p&gt;
-        </code>
-        <p>
-            En JavaScript,
-        </p>
-        <code>
-            const boton = document.getElementById("miBoton"); <br><br>
-
-            boton.addEventListener("click", function() { <br>
-            document.getElementById("mensaje").textContent = "¡Hiciste clic en el botón!"; <br>
-            });
-        </code>
     </div>
     <div class="eveLis-example">
         <p>
@@ -216,7 +201,7 @@ AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
         Ejemplo,
     </p>
     <code>
-        &lt;div id="caja">Hola mundo/div&lt; <br><br>
+        &lt;div id="caja"&gt;Hola mundo&lt;/div&gt;<br><br>
         const caja = document.getElementById("caja");<br>
         caja.style.color = "white";<br>
         caja.style.backgroundColor = "blue";<br>
@@ -267,9 +252,10 @@ AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
     </div>
     <div class="add-example">
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ipsum sunt? Illum minima mollitia ex molestias repellendus officia cumque corporis! Unde aspernatur explicabo alias est nisi ad a itaque sequi?
-            Beatae sint optio id natus quam ex aut laboriosam quaerat dolorem non dicta porro delectus animi soluta hic quas neque voluptate amet architecto tenetur sunt, maiores est voluptates! Earum, magni.
+            Destacar un mensaje <strong>importante.</strong>
         </p>
+        <p id="parrafoAdd">Este es un mensaje muy pero muy importante.</p>
+        <button id="btnAdd">Importante</button>
     </div>
 </section>
 <section class="remo-container">
@@ -306,9 +292,14 @@ AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
     </div>
     <div class="remo-example">
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ipsum sunt? Illum minima mollitia ex molestias repellendus officia cumque corporis! Unde aspernatur explicabo alias est nisi ad a itaque sequi?
-            Beatae sint optio id natus quam ex aut laboriosam quaerat dolorem non dicta porro delectus animi soluta hic quas neque voluptate amet architecto tenetur sunt, maiores est voluptates! Earum, magni.
+            Quitar el estilo de un ítem de lista.
         </p>
+        <ul>
+            <li id="itemRemove" class="tachado">Tarea completada</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, quia?</li>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, nisi.</li>
+        </ul>
+        <button id="btnRemove">Quitar tachado</button>
     </div>
 </section>
 <section class="tog-container">
@@ -345,11 +336,14 @@ AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
             }); 
         </code>
     </div>
-    <div class="remo-example">
+    <div class="tog-example">
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ipsum sunt? Illum minima mollitia ex molestias repellendus officia cumque corporis! Unde aspernatur explicabo alias est nisi ad a itaque sequi?
-            Beatae sint optio id natus quam ex aut laboriosam quaerat dolorem non dicta porro delectus animi soluta hic quas neque voluptate amet architecto tenetur sunt, maiores est voluptates! Earum, magni.
+           Ejemplo de <strong>Dark Mode.</strong>
         </p>
+        <button id="modo">Cambiar a Modo Oscuro</button>
+        <h3>Bienvenidos</h3>
+        <p>Este es un ejemplo</p>
+
     </div>
 </section>
 <footer>
