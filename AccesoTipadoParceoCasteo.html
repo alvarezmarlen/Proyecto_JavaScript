@@ -24,18 +24,19 @@
       </a>
       <div class="titulo-sitio">
         <h1>JavaScript <span class="resaltado">DOMinators</span></h1>
-        <p class="subtitulo">Ejemplos interactivos • 100% práctico • Live Code</p>
+        <p class="subtitulo">Ejemplos interactivos • 100% práctico</p>
       </div>
     </div>
 
     <!-- Navegación -->
     <nav class="header-nav">
       <a href="index.html"class="btn-destacado">Inicio</a>
-      <a href="metodos-seleccion.html"class="btn-destacado">Selección</a>
+      <a href="Dom.html"class="btn-destacado">DOM</a>
+      <a href="metodos-seleccion.html" class="btn-destacado">Metodos de Seleccion</a>
+      <a href="mdm-index.html" class="btn-destacado">Metodos de Modificacion</a>
       <a href="acceso-tipado-parseo-casteo.html"class="btn-destacado">Acceso y Tipado</a>
-      <a href="eventos.html"class="btn-destacado">Eventos</a>
-      <a href="dom-avanzado.html" class="btn-destacado">DOM Avanzado</a>
-      <a href="proyectos.html" class="btn-destacado">Proyectos</a>
+    
+   
     </nav>
 
     <!-- Menú móvil (hamburguesa) -->
@@ -77,23 +78,32 @@
         </div>
         <div class="header-controls">
           <button class="btn btn-live on" onclick="toggleLive('sec-value', this)">Live ON</button>
-          <button class="btn btn-clear" onclick="clearConsole('sec-value')">Limpiar</button>
-          <button class="btn btn-fullscreen" onclick="toggleFullscreen('sec-value', this)">Expandir</button>
+        
         </div>
       </div>
 
       <textarea id="code-sec-value">
+ let saludar = {value:"hola"};
+let valor = saludar.value;
+
+console.log(valor)
+
+
+
+
+
+
         const object1 = {
   a: "somestring",
   b: 42,
   c: false,
 };
 
+
 console.log(Object.values(object1));
 // Expected output: Array ["somestring", 42, false]
 
 
-<!--
 function extraerValores(obj) {
   // El uso de Object.values() para obtener un array de los valores
   const valoresArray = Object.values(obj); 
@@ -182,7 +192,23 @@ console.log(typeof 42);        // number
 console.log(typeof "hola");   // string
 console.log(typeof true);     // boolean
 console.log(typeof undefined); // undefined
-console.log(typeof null);     // object (¡clásico!)</textarea>
+console.log(typeof null);     // object (¡clásico!)
+
+console.log("Tipos no primitivos:");
+
+// Objeto
+let persona = { nombre: "Juan", edad: 30 };
+console.log(typeof persona);        // "object"
+
+// Array
+let numeros = [1, 2, 3];
+console.log(typeof numeros);        // "object" (arrays son objetos)
+
+// Función
+function saludar() { return "Hola"; }
+console.log(typeof saludar); 
+
+</textarea>
         <div class="resize-handle" onmousedown="startResize(event, 'sec2')"></div>
         <pre class="salida" id="out-sec2">Salida aparecerá aquí...</pre>
       </div>
@@ -298,7 +324,11 @@ console.log("parseInt →", parseInt(str));
 console.log("parseFloat →", parseFloat("3.14"));
 console.log("Number →", Number(str));
 console.log("coerción →", '5' + 10);
-console.log("truco + →", +"75");</textarea>
+console.log("truco + →", +"75");
+
+
+
+</textarea>
         <div class="resize-handle" onmousedown="startResize(event, 'sec5')"></div>
         <pre class="salida" id="out-sec5">Salida aparecerá aquí...</pre>
       </div>
@@ -311,22 +341,22 @@ console.log("truco + →", +"75");</textarea>
   <div class="footer-contenido">
     <div class="footer-logo">
       <img src="assets/img/logo.png" alt="Logo">
-      <p>Aprende JavaScript<br>paso a paso y con ejemplos reales</p>
+      <p>Proyecto basico de JavaScript</p>
     </div>
 
     <div class="footer-enlaces">
       <h4>Navegación rápida</h4>
       <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="metodos-seleccion.html">Métodos de selección</a></li>
-        <li><a href="acceso-tipado-parseo-casteo.html">Acceso y Tipado</a></li>
-        <li><a href="eventos.html">Eventos</a></li>
-        <li><a href="dom-avanzado.html">DOM Avanzado</a></li>
+        <li><a href="Dom.html">DOM</a></li>
+        <li><a href="metodos-seleccion.html">Metodos de Seleccion</a></li>
+        <li><a href="mdm-index.html">Metodos de Modificacion</a></li>
+        <li><a href="AccesoTipadoParceoCasteo.html">Acceso y Tipado</a></li>
       </ul>
     </div>
 
   <div class="footer-copy">
-    <p>© <span id="year"></span> Tu Nombre o Proyecto • Hecho con cariño y mucho JavaScript</p>
+    <p>© <span id="year"></span> DOMinators•  JavaScript</p>
   </div>
 </footer>
 
@@ -432,6 +462,7 @@ console.log("truco + →", +"75");</textarea>
     document.addEventListener('mousemove', doResize);
     document.addEventListener('mouseup', stopResize);
   }
+
 </script>
 
 
