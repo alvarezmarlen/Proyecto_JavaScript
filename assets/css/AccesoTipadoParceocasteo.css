@@ -16,14 +16,14 @@ body {
     color: #000;         /* opcional: color de texto negro */
 }
 
-/* ==================================== */
-/* =============== HEADER ============== */
-/* ==================================== */
+
+/*  HEADER */
+
 
 .header-principal {
   background: linear-gradient(135deg, #0a0e17 0%, #1a2332 100%);
   border-bottom: 4px solid rgb(60, 221, 221);
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
@@ -300,9 +300,9 @@ li span {
       margin: 4px 0;
     }
 
-/* ==================================== */
-/* =============== FOOTER ============== */
-/* ==================================== */
+
+/* FOOTER */
+
 footer {
   background: linear-gradient(135deg, #0f1620 0%, #1a2332 100%);
   color: #fff;
@@ -383,7 +383,7 @@ h4 {
   .header-nav.active {
     display: flex;
   }
-
+ 
   .menu-toggle {
     display: flex;
   }
