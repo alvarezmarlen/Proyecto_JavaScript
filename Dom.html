@@ -1,139 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta link="stylesheet" href="../css/Dom.css">
-   
-    
+    <link rel="stylesheet" href="assets/css/Dom.css">
     <title>Document</title>
 </head>
 
- <header class="Header-color">
-    <h1>Que es el Dom?</h1>
-    </header>
-
-<div class="Explicacion de que es el Dom"></div>
-    <p>Es una interfaz de programación (API) que representa la estructura de un documento HTML 
-    o XML como un árbol de objetos en la memoria.</p> 
-
 <body>
 
-    <section class="section1">
-        <div class="Estructura">
-        <h1>Ejemplo 1 DOM - Estructura </h1>
-<div class="union">
-       <table>
-    <tbody>
-        <tr>
-            <td>Coche</td>
-            <td>Scooter</td>
-        </tr>
-        <tr>
-            <td>Motociclo</td>
-            <td>Autobús</td>
-        </tr>
-    </tbody>
-</table>
+    <header class="Header-color">
+        <h1>¿Qué es el DOM?</h1>
+    </header>
 
-        <img src="assets/img/Arbol de dom(ejemplo).png" alt="Arbol del DOM">
-    </div>
-        </div>
-    </section>
-    
+    <main>
 
-    <section>
+        <section class="Explicacion-Dom">
+            <p>
+                Es una interfaz de programación (API) que representa la estructura de un documento HTML
+                o XML como un árbol de objetos en la memoria.
+            </p>
+        </section>
 
-    <h2>Ejemplo 2 DOM - Introduccion</h2>
-    <p id="intro">Introduccion para el ejemplo 1 del uso del DOM</p>
+        <!-- EJEMPLO 1 -->
+        <section class="section1">
+            <article class="estructura">
+                <h2>Ejemplo 1: DOM - Estructura</h2>
 
-    <p>Este es el ejemplo del uso del metodo  <b>getElementById</b></p> 
+                <div class="union">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Coche</td>
+                                <td>Scooter</td>
+                            </tr>
+                            <tr>
+                                <td>Motociclo</td>
+                                <td>Autobús</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-    <p id="demo"></p>
+                    <img src="assets/img/Arbol de dom(ejemplo).png" alt="Árbol del DOM">
+                </div>
+            </article>
 
-  </section>
-<br>
-<br>
-<br>
 
-  <section>
-   <header>
-    <title>Manipulación del Dom</title>
-   </header>
+            <!-- EJEMPLO 2 -->
+            <article class="introduccion">
+                <h2>Ejemplo 2: DOM - Introducción</h2>
 
-   
-    <h3>Ejemplo 3 DOM - Recogida de datos</h3>
-    <label>Intoduce valor 1: </label>
-    <input type="text" id="val1">
-    <br /><br />
-    <label>Introduce valor 2: </label>
-    <input type=".text" id="val2">
-    <br /><br />
-    <button onclick="getAdd()">Click para añadir!</button>
-    <p id="result"></p>
+                <p id="intro">Introducción para el ejemplo del uso del DOM.</p>
 
-   
-  </section>
-  <br>
-  <br>
+                <p>Este es el ejemplo del método <b>getElementById</b>:</p>
 
-  <Section>
+                <p id="demo"></p>
+            </article>
 
-    <title>Ejemplo innerText vs innerHTML</title>
+            <!-- EJEMPLO 3 -->
+            <article class="manipulacion">
+                <h2>Manipulación del DOM</h2>
 
-    <h4>Ejemplo de innerText e innerHTML</h4>
-    <style>
-        body { font-family: sans-serif; margin: 30px; }
-        .box {
-            border: 1px solid #ccc;s
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-        }
-        .inner-text-box { background-color: #e9f5ff; }
-        .inner-html-box { background-color: #f0fff0; }
-        button {
-            padding: 10px 15px;
-            margin-right: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        #btnText { background-color: #007bff; color: white; }
-        #btnHtml { background-color: #28a745; color: white; }
+                <h3>Ejemplo 3: Recogida de datos</h3>
 
-        section{
-    padding-bottom: 2rem;
-}
+                <label>Introduce valor 1:</label>
+                <input type="text" id="val1">
+                <br><br>
 
-.section1{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items:center;
-    
-}
-    </style>
+                <label>Introduce valor 2:</label>
+                <input type="text" id="val2">
+                <br><br>
+
+                <button onclick="getAdd()">Click para añadir</button>
+
+                <p id="result"></p>
+            </article>
+
+        </section>
 
 
 
-    <h2>Contenedores Originales</h2>
+        <!-- EJEMPLO innerText vs innerHTML -->
+        <section>
 
-    <div id="contenedorTexto" class="box inner-text-box">
-        <p>Este es el contenido inicial del **Contenedor TEXTO**.</p>
-        <p>Aquí hay un segundo párrafo.</p>
-    </div>
+            <h2>Ejemplo: innerText vs innerHTML</h2>
 
-    <div id="contenedorHTML" class="box inner-html-box">
-        <p>Este es el contenido inicial del **Contenedor HTML**.</p>
-        <p>Aquí hay un segundo párrafo.</p>
-    </div>
+            <h3>Contenedores Originales</h3>
 
-    <button id="btnText" onclick="usarInnerText()">Usar innerText (Solo texto)</button>
-    <button id="btnHtml" onclick="usarInnerHTML()">Usar innerHTML (Permite HTML)</button>
+            <div id="contenedorTexto" class="box inner-text-box">
+                <p>Este es el contenido inicial del **Contenedor TEXTO**.</p>
+                <p>Aquí hay un segundo párrafo.</p>
+            </div>
 
-    
-  </Section>
-   <script src="assets/js/dom.js"></script>
+            <div id="contenedorHTML" class="box inner-html-box">
+                <p>Este es el contenido inicial del **Contenedor HTML**.</p>
+                <p>Aquí hay un segundo párrafo.</p>
+            </div>
+
+            <button id="btnText" onclick="usarInnerText()">Usar innerText (Solo texto)</button>
+            <button id="btnHtml" onclick="usarInnerHTML()">Usar innerHTML (Permite HTML)</button>
+
+        </section>
+
+    </main>
+
+    <script src="assets/js/dom.js"></script>
+
 </body>
+
 </html>
