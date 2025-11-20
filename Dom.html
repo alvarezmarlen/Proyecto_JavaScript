@@ -9,6 +9,40 @@
 </head>
 
 <body>
+<header class="header-principal">
+  <div class="header-contenido">
+    <!-- Logo + Título -->
+    <div class="header-izquierda">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/logo.png" alt="Logo JavaScript" class="logo">
+      </a>
+      <div class="titulo-sitio">
+        <h1>JavaScript <span class="resaltado">DOMinators</span></h1>
+        <p class="subtitulo">Ejemplos interactivos • 100% práctico</p>
+      </div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="header-nav">
+      <a href="index.html"class="btn-destacado">Inicio</a>
+      <a href="Dom.html"class="btn-destacado">DOM</a>
+      <a href="metodos-seleccion.html" class="btn-destacado">Metodos de Seleccion</a>
+      <a href="mdm-index.html" class="btn-destacado">Metodos de Modificacion</a>
+      <a href="AccesoTipadoParceoCasteo.html"class="btn-destacado">Acceso y Tipado</a>
+
+
+    </nav>
+
+    <!-- Menú móvil (hamburguesa) -->
+    <button class="menu-toggle" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+
 
     <header class="Header-color">
         <h1>¿Qué es el DOM?</h1>
@@ -102,6 +136,29 @@
             <button id="btnHtml" onclick="usarInnerHTML()">Usar innerHTML (Permite HTML)</button>
 
         </section>
+
+        <footer>
+  <div class="footer-contenido">
+    <div class="footer-logo">
+      <img src="assets/img/logo.png" alt="Logo">
+      <p>Proyecto basico de JavaScript</p>
+    </div>
+
+    <div class="footer-enlaces">
+      <h4>Navegación rápida</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="Dom.html">DOM</a></li>
+        <li><a href="metodos-seleccion.html">Metodos de Seleccion</a></li>
+        <li><a href="mdm-index.html">Metodos de Modificacion</a></li>
+        <li><a href="AccesoTipadoParceoCasteo.html">Acceso y Tipado</a></li>
+      </ul>
+    </div>
+
+  <div class="footer-copy">
+    <p>© <span id="year"></span> DOMinators•  JavaScript</p>
+  </div>
+</footer>
 
     </main>
 
