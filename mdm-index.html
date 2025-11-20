@@ -3,25 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mdetodos de Modificacion</title>
     <link rel="stylesheet" href="/assets/css/mdm-styles.css">
 </head>
-   <!-- NAV BLANCA SUPERIOR -->
-    <nav class="navwhite-top">
-        <div class="nav-left">
-            <img src="assets/img/logo demo-2.2.1.png" alt="logo-icon">
-        </div>
-
-        <ul class="nav-menu">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">De Atributos</a></li>
-            <li><a href="#">De Reglas Css</a></li>
-        </ul>
-    </nav>
-
-    <div class="navblack-bottom">
-        <span>DOMINATORS</span>
+<!-- ------------------------------------------------------------
+AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
+----------------------------------------------------------------->
+<header class="header-principal">
+  <div class="header-contenido">
+    <!-- Logo + Título -->
+    <div class="header-izquierda">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/logo.png" alt="Logo JavaScript" class="logo">
+      </a>
+      <div class="titulo-sitio">
+        <h1>JavaScript <span class="resaltado">DOMinators</span></h1>
+        <p class="subtitulo">Ejemplos interactivos • 100% práctico</p>
+      </div>
     </div>
+
+    <!-- Navegación -->
+    <nav class="header-nav">
+      <a href="index.html"class="btn-destacado">Inicio</a>
+      <a href="Dom.html"class="btn-destacado">DOM</a>
+      <a href="metodos-seleccion.html" class="btn-destacado">Metodos de Seleccion</a>
+      <a href="mdm-index.html" class="btn-destacado">Metodos de Modificacion</a>
+      <a href="AccesoTipadoParceoCasteo.html"class="btn-destacado">Acceso y Tipado</a>
+    </header>
+    </nav>
     <header class="header-video">
     <video autoplay muted loop playsinline class="bg-video">
         <source src="assets/img/dom-background.mp4" type="video/mp4">
@@ -60,9 +69,11 @@
     </div>
     <div class="getA-example">
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ipsum sunt? Illum minima mollitia ex molestias repellendus officia cumque corporis! Unde aspernatur explicabo alias est nisi ad a itaque sequi?
-            Beatae sint optio id natus quam ex aut laboriosam quaerat dolorem non dicta porro delectus animi soluta hic quas neque voluptate amet architecto tenetur sunt, maiores est voluptates! Earum, magni.
+            Mostrar el <strong>src</strong> de una imagen.
         </p>
+        <img id="imageAtt" src="assets/img/logo demo-2.2.1.png" alt="icon">
+        <button id="mostrarSrc">Mostrar ruta de la imagen</button>
+        <p id="info"></p>
     </div>
 </section>
 <section class="setA-container">
@@ -88,9 +99,10 @@
     </div>
     <div class="setA-example">
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ipsum sunt? Illum minima mollitia ex molestias repellendus officia cumque corporis! Unde aspernatur explicabo alias est nisi ad a itaque sequi?
-            Beatae sint optio id natus quam ex aut laboriosam quaerat dolorem non dicta porro delectus animi soluta hic quas neque voluptate amet architecto tenetur sunt, maiores est voluptates! Earum, magni.
+            <strong>Cambiar </strong>imagen.
         </p>
+        <img id="imageSet" src="assets/img/logo demo-2.2.1.png" alt="first-image">
+        <button id="cambiar">Cambiar imagen</button>
     </div>
 </section>
 <section class="remA-container">
@@ -118,9 +130,10 @@
     </div>
     <div class="remA-example">
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ipsum sunt? Illum minima mollitia ex molestias repellendus officia cumque corporis! Unde aspernatur explicabo alias est nisi ad a itaque sequi?
-            Beatae sint optio id natus quam ex aut laboriosam quaerat dolorem non dicta porro delectus animi soluta hic quas neque voluptate amet architecto tenetur sunt, maiores est voluptates! Earum, magni.
+            Activar un input quitando el atributo <strong>disabled.</strong>
         </p>
+        <input id="nombre" type="text" disabled placeholder="Campo deshabilitado">
+        <button id="activar">Activar campo</button>
     </div>
 </section>
 <section class="hasA-container">
@@ -147,9 +160,42 @@
     </div>
     <div class="hasA-example">
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ipsum sunt? Illum minima mollitia ex molestias repellendus officia cumque corporis! Unde aspernatur explicabo alias est nisi ad a itaque sequi?
-            Beatae sint optio id natus quam ex aut laboriosam quaerat dolorem non dicta porro delectus animi soluta hic quas neque voluptate amet architecto tenetur sunt, maiores est voluptates! Earum, magni.
+            Verificar si un botón tiene el atributo <strong>disabled.</strong>
         </p>
+        <button id="miBoton" disabled>Botón deshabilitado</button>
+        <p id="mensaje"></p>
+        <button id="verificar">Verificar atributo</button>
+    </div>
+</section>
+<section class="eveLis-container">
+    <div class="eveLis-teory">
+        <h2>addEventListener()</h2>
+        <p>
+            Toma el <strong>evento</strong> y lo pone a <strong>escuchar.</strong><br>
+            Sintaxis: <code>element.addEventListener (event, listener);</code><br>
+            Ejemplo,
+        </p>
+        <code>
+            &lt;button id="miBoton"&gt;Haz clic aquí&lt;/button&gt; <br>
+            &lt;p id="mensaje"&gt;&lt;/p&gt;
+        </code>
+        <p>
+            En JavaScript,
+        </p>
+        <code>
+            const boton = document.getElementById("miBoton"); <br><br>
+
+            boton.addEventListener("click", function() { <br>
+            document.getElementById("mensaje").textContent = "¡Hiciste clic en el botón!"; <br>
+            });
+        </code>
+    </div>
+    <div class="eveLis-example">
+        <p>
+            Cambiar el texto al hacer <strong>clic.</strong>
+        </p>
+        <button id="boton2">Haz clic aquí</button>
+        <p id="mensaje2">Aún no has hecho clic.</p>
     </div>
 </section>
 <section class="modCss-main">
@@ -306,6 +352,28 @@
         </p>
     </div>
 </section>
+<footer>
+  <div class="footer-contenido">
+    <div class="footer-logo">
+      <img src="assets/img/logo.png" alt="Logo">
+      <p>Proyecto basico de JavaScript</p>
+    </div>
+
+    <div class="footer-enlaces">
+      <h4>Navegación rápida</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="Dom.html">DOM</a></li>
+        <li><a href="metodos-seleccion.html">Metodos de Seleccion</a></li>
+        <li><a href="mdm-index.html">Metodos de Modificacion</a></li>
+        <li><a href="AccesoTipadoParceoCasteo.html">Acceso y Tipado</a></li>
+      </ul>
+    </div>
+
+  <div class="footer-copy">
+    <p>© <span id="year"></span> DOMinators•  JavaScript</p>
+  </div>
+</footer>
 <body>
 <script src="assets/js/mdm-script.js"></script>    
 </body>
