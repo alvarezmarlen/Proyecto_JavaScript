@@ -2,10 +2,30 @@ section{
     padding-bottom: 2rem;
 }
 
-.section1{
+.section1 .Estructura {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items:center;
-    
+    flex-direction: center;
+    gap: 20px;
+}
+
+.union {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.union table {
+    border-collapse: collapse;
+    font-size: 18px;
+}
+
+.union td {
+    border: 1px solid #000;
+    padding: 10px 15px;
+}
+
+.union img {
+    width: 350px;   
+    height: auto;
 }
