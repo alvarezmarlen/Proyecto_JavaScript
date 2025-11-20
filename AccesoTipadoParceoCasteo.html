@@ -441,30 +441,7 @@ console.log("truco + →", +"75");
     }
   }
 
-  // Redimensionar editor
-  function startResize(e, id) {
-    e.preventDefault();
-    const container = document.getElementById(id);
-    const startY = e.clientY;
-    const startHeight = container.offsetHeight;
-
-    function doResize(e) {
-      const newHeight = startHeight + (e.clientY - startY);
-      if (newHeight > 150) {
-        const cm = container.querySelector('.CodeMirror');
-        if (cm) cm.style.height = (newHeight - 100) + 'px';
-      }
-    }
-
-    function stopResize() {
-      document.removeEventListener('mousemove', doResize);
-      document.removeEventListener('mouseup', stopResize);
-    }
-
-    document.addEventListener('mousemove', doResize);
-    document.addEventListener('mouseup', stopResize);
-  }
-
+  
 </script>
 
 
