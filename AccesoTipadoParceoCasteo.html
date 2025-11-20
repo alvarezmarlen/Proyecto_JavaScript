@@ -94,14 +94,14 @@ console.log(valor)
 
 
         const object1 = {
-  a: "somestring",
+  a: "cualquier Cosa",
   b: 42,
   c: false,
 };
 
 
 console.log(Object.values(object1));
-// Expected output: Array ["somestring", 42, false]
+// Expected output: Array ["cualquier Cosa, 42, false]
 
 
 function extraerValores(obj) {
@@ -115,7 +115,7 @@ const resultado = extraerValores(object1);
 
 // 2. Mostrar el resultado
 console.log(resultado); 
-// Salida esperada: ["somestring", 42, false]
+// Salida esperada: ["cualquier Cosa", 42, false]
 
 
 
@@ -189,6 +189,7 @@ console.log("foo es booleano:", foo);</textarea>
         </div>
         <textarea id="code-sec2">console.log("Tipos primitivos:");
 console.log(typeof 42);        // number
+console.log(typeof 3.14);       // number
 console.log(typeof "hola");   // string
 console.log(typeof true);     // boolean
 console.log(typeof undefined); // undefined

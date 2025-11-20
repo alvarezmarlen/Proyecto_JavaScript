@@ -162,7 +162,7 @@ section{
 .contenedor {
 background-color: rgba(255, 255, 255, 0.8);
 width: 80%;
-border: 4px solid rgba(180, 185, 185, 0.2);       /* borde negro difuminado */
+border: 8px solid rgba(180, 185, 185, 0.2);       /* borde negro difuminado */
 border-radius: 2rem;                        /* esquinas redondeadas */
 box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* sombra suave y difusa */
 padding: 1rem;                              /* espacio interno */
