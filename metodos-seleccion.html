@@ -40,24 +40,22 @@
 </header>
     <main>
         <h1 class="titulo-pagina">Mètodos de Selecciòn</h1>
-        <section class="container">
+        <section id="container">
+
             <details class="byid">
                 <summary>document.getElementById()</summary>
                     <details>
-                        <summary class="ejemplos">Ejemplo 1 <small>(Selecciona un elemento por su ID y le cambia el contenido)</small></summary>
-                            <h2 id="saludo"></h2> <!-- EJEMPLO 1 -->
+                        <summary class="ejemplos">Ejemplo 1 <small>(Selecciona un elemento por su ID )</small></summary>
+                            <h2 id="saludo">Buenos días</h2> 
                     </details>                    
                      
                     <details>
-                        <summary class="ejemplos">Ejemplo 2 <small>(Obtiene el contenido de un elemento y lo muestra en otro)</small></summary>
-                            <p id="intro">Cómo encontrar elementos HTML por su ID</p>
-                            <p id="demo"></p> <!-- EJEMPLO 2-->
+                        <summary class="ejemplos">Ejemplo 2 <small>(Selecciona un elemento por su ID y Cambia el color)</small></summary>
+                            <h2 class="html">HTML</h2>
+                            <h2 id="html">HTML</h2>
+                            <h2>HTML</h2>
                     </details>                    
-                
-                    <details>
-                        <summary class="ejemplos">Ejemplo 3 <small>(Cambia el color automáticamente al cargar)</small></summary>
-                            <p id="saludos">Hello Mundo</p>  <!-- Cambia a rojo al cargar -->
-                    </details>           
+     
             </details>        
 
 
@@ -65,17 +63,19 @@
                 <summary>getElementsByClassName()</summary>
                     <details>
                         <summary class="ejemplos">Ejemplo 1 <small>(Buscar elementos HTML por nombre de clase.)</small></summary>
-                            <p class="nota">¡Hola mundo!</p>
-                            <p class="nota">Este ejemplo muestra el método <b>getElementsByClassName</b>.</p>
+                        <p class="dulce">Galletas</p>
+                        <p class="dulce">Tartas</p>
+                        <p class="dulce">Gaseosa</p>
+                        <p class="sal">Pescado</p>
 
-                            <p id="demostra"></p>
                     </details>  
 
                     <details>
-                        <summary class="ejemplos">Ejemplo 2 <small>(Cambia el color de todos los elementos con la misma clase)</small></summary>
-                            <h2 class="resaltadoc">Elemento 1</h2>
-                            <h2 class="resaltadoc">Elemento 2</h2>
-                            <h2 class="resaltadoc">Elemento 3</h2>
+                        <summary class="ejemplos">Ejemplo 2 <small>(Cambia el párrafo 4)</small></summary>
+                        <p class="dulce1">Galletas</p>
+                        <p class="dulce1">Tartas</p>
+                        <p class="dulce1">Gaseosa</p>
+                        <p class="sal1">Pescado</p>
                     </details>                 
             </details>        
     
@@ -84,57 +84,29 @@
             <details class="tagName">
                 <summary>getElementsByTagName()</summary>
                     <details>
-                        <summary class="ejemplos tag">Ejemplo 0 <small>(buscan los elementos por etiqueta)</small></summary>
-                            <p>Primer párrafo</p>
-                            <p>Segundo párrafo</p>
-                            <p>Tercer párrafo</p>
+                        <summary class="ejemplos tag">Ejemplo 1 <small>(busca los elementos por etiqueta)</small></summary>
+                        <p>Lenguaje</p>
+                        <h3>Historia</h3>
+                        <p>Ciencias</p>
+                        <h3>Arte</h3>
+                        <p>Museos</p>
 
-                            <p id="demoTag"></p>
                     </details> 
                     
                     <details>
-                        <summary class="ejemplos">Ejemplo 1 <small>(Cambia el color de todos los párrafos)</small></summary>
-                            <p>Primer párrafo</p>
-                            <p>Segundo párrafo</p>
-                            <p>tercer párrafo</p>
+                        <summary class="ejemplos">Ejemplo 1 <small>(Lista )</small></summary>
+                        <ul id="lista-ingrediente">
+                            <li>Tomate</li>
+                            <li>Queso</li>
+                        </ul>
 
-                            <button onclick="cambiarColor()">Cambiar color</button>
+                        <ol id="pasos-preparacion">
+                            <li>Lavar Ingredientes</li>
+                            <li>Cortar tomates</li>
+                        </ol>
+
                     </details>
                     
-                    <details open>
-                        <summary class="ejemplos">Ejemplo 2 <small>(Contar cuántos títulos h3 hay)</small></summary>
-                            <h3>Título 1</h3>
-                            <h3>Título 2</h3>
-                            <h3>Título 3</h3>
-
-                            <div id="resultado"></div>
-                    </details>  
-
-                    <details>
-                        <summary class="ejemplos">Ejemplo 3 <small>(Cambiar texto de todos los elementos li)</small></summary>
-                            <ul>
-                                <li>Manzana</li>
-                                <li>Banana</li>
-                                <li>Naranja</li>
-                            </ul>
-
-                            <button onclick="cambiarTexto()">Cambiar nombres</button>
-                    </details> 
-            </details>        
-
-
-            <details class="byName">
-                <summary>getElementsByName()</summary>
-                <details>
-                    <summary class="ejemplos">Selecciona los elementos por su atributo name</summary>
-                    <p>Elige un lenguaje:</p>
-                    <input type="radio" name="lenguaje" value="JavaScript"> JavaScript <br>
-                    <input type="radio" name="lenguaje" value="Python"> Python <br>
-                    <input type="radio" name="lenguaje" value="Java"> Java <br>
-
-                    <button onclick="mostrarSeleccion()">Mostrar selección</button>
-                    <p id="resultadoName"></p>
-                    </details>
             </details>        
 
 
@@ -142,30 +114,19 @@
                 <summary>querySelector()</summary>
                 <details>
                     <summary class="ejemplos">Ejemplo 1 <small>(Selecciona un elemento por ID)</small></summary>
-                    <h2 id="titulo">Hola, mundo</21>
-                    <button id="boton">Cambiar texto</button>
-                </details>
-                
-                <details>
-                    <summary class="ejemplos">Ejemplo 2 <small>(Selecciona un elemento por clase)</small></summary>
-                    <p class="resaltad">Este es un párrafo resaltado</p>
-                    <p>Otro párrafo normal</p>
-                </details> 
-                
-                <details>
-                    <summary class="ejemplos">Ejemplo 3 <small>(Seleccionar un input usando un atributo)</small></summary>
-                    <input type="text" id="miInput" placeholder="Escribe algo aquí">                    
-                    <button id="btn">Mostrar valor</button>
-                </details>
-                
-                <details>
-                    <summary class="ejemplos">Ejemplo 4 <small>(Combinar selectores para seleccionar elementos específicos)</small></summary>
-                    <ul>
-                        <li class="item">Elemento 1</li>
-                        <li class="item">Elemento 2</li>
-                        <li class="item destacado">Elemento 3</li>
+                    <ul class="lista-toppings">
+                        <li id="aceitunas">Aceitunas</li>
+                        <li class="cebolla" id="salado" >Cebolla</li>
+                        <li class="topping"  id="albahaca">Albahaca</li>
+                        <li class="cebolla" id="salado">Champiñones</li>
                     </ul>
                 </details>
+                
+                <details>
+                    <summary class="ejemplos">Ejemplo 2 <small>(Devuelve el resultado que coincida con los 2 selectores)</small></summary>
+                    <p class="demo"></p>
+                </details> 
+                
             </details>        
 
 
@@ -173,26 +134,22 @@
                 <summary>querySelectorAll()</summary>                
                 <details>
                     <summary class="ejemplos">Ejemplo 1 <small>(Cambiar color a todos los párrafos)</small></summary>
-                    <p>Primer párrafo</p>
-                    <p>Segundo párrafo</p>
-                    <p>Tercer párrafo</p>
-                    <button onclick="cambiarColo()">Cambiar color</button>
-                </details> 
+                    <ul class="helados">
+                        <li class="topping-naranja items">Fresa</li>
+                        <li class="topping-naranja">Caramelo</li>
+                        <li class="topping-naranja items">Sirop de Chocolate</li>
+                        <li class="topping-naranja">Frambuesa</li>
+                        <li class="topping-naranja items">Piña</li>
+                        <li class="topping-naranja items">M&M</li>
 
-                <details>
-                    <summary class="ejemplos">Ejemplo 2 <small>(Seleccionar elementos dentro de un contenedor)</small></summary>
-                    <div id="contenedor">
-                        <p class="texto">Primer párrafo</p>
-                        <p class="texto">Segundo párrafo</p>
-                        <p class="texto">Tercer párrafo</p>
-                    </div>
-                    <button onclick="marcar()">Marcar</button>
+                    </ul>
                 </details> 
             </details>        
         </section>
     </main>
 
 
+    
     <footer>
         <div class="footer-contenido">
             <div class="footer-logo">

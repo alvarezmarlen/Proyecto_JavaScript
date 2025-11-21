@@ -14,7 +14,7 @@
     border-radius: 2rem;
     margin-left: 25rem;
     }
-    .container{
+    #container{
         font-size: 3rem;
         margin: 5rem 7rem;
     }
@@ -26,9 +26,6 @@
     }
     .tagName{
     background-color: #ffd6a5;
-    }
-    .byName{
-    background-color:  #d6c1f5;
     }
     .queryselec{
     background-color: #ade8f4;
@@ -53,7 +50,7 @@
         margin-bottom: 1rem;
         
     }
-    #saludo{
+     h2{
         font-size: 3rem;
         text-align: center;
     }
@@ -74,7 +71,7 @@
         font-size: 2rem;
         margin-left: 9rem;
     }
- #resultado, h3, li {
+ #resultado, h3, li, p{
         font-size: 2rem;
         margin-left: 9rem;
     }
