@@ -46,6 +46,25 @@ boton5.addEventListener("click", function() {
     mensaje2.textContent = "¡Hiciste clic en el botón!";
 });
 
+/* getComputed() */
+const mensaje6 = document.getElementById("mensaje4");
+const boton6 = document.getElementById("btn4");
+
+boton6.addEventListener("click", () => {
+  const estilos = getComputedStyle(mensaje6);
+  const visible = estilos.display !== "none";
+
+  if (visible) {
+    alert("El mensaje SÍ está visible");
+  } else {
+    alert("El mensaje NO está visible");
+  }
+});
+
+
+
+
+
 /* add() */
 const parrafo = document.getElementById("parrafoAdd");
 const btnAdd1 = document.getElementById("btnAdd");

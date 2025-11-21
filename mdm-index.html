@@ -210,6 +210,59 @@ AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
     </code>
 
 </section>
+<section class="getCom-container">
+    <div class="getCom-teory">
+    <h2>Leer Estilos Computados getComputedStyle()</h2>
+    <p>
+        Te permite saber los estilos finales que tiene un elemento en la pantalla.
+    </p>
+    <p>
+        Por ejemplo,
+    </p>
+    <code>
+        &lt;p id="mensaje" class="importante"&gt;Hola mundo&lt;/p&gt;
+    </code>
+        <p>
+        En Css,
+    </p>
+    <code>
+        .importante { <br>
+            font-size: 20px; <br>
+            color: darkblue; <br>   
+        }
+    </code>
+    <p>
+        En Js,
+    </p>
+    <code> 
+        const parrafo = document.getElementById("mensaje"); <br>
+        const estilos = getComputedStyle(parrafo);<br><br>
+
+        console.log(estilos.fontSize); // "20px"<br>
+        console.log(estilos.color);    // "rgb(0, 0, 139)"<br>
+    </code>
+    <p>
+        Aunque no usamos <strong>.style</strong> para aplicar directamente estos valores, <strong>getComputedStyle()</strong> nos da los resultados ya aplicados por las clases y reglas CSS.
+    </p>
+    <p>
+        Nota: El color “darkblue” se devuelve como “rgb(0, 0, 139)” porque getComputedStyle() normaliza los valores de color al formato RGB. 
+        Este comportamiento garantiza coherencia entre navegadores y es útil para cálculos de contraste o comparaciones visuales.
+    </p>
+    </div>
+    <div class="getCom-example">
+        <p>
+           Detectar si un elemento está <strong>oculto o visible. </strong>
+        </p>
+        <span>
+            Imagina que tienes un botón que <strong>solo debe funcionar si un mensaje está visible.</strong><br>
+            El problema es que el mensaje puede estar oculto por CSS (por ejemplo display: none;), 
+            y tú necesitas saber si realmente se está mostrando en pantalla.
+        </span>
+        <p id="mensaje4" class="importante4">Este es un mensaje importante</p>
+        <button id="btn4">Verificar estado</button>
+
+    </div>
+</section>
 <section class="manClassCss">
     <h2>Manipulación de Clases CSS</h2>
     <p>
