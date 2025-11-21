@@ -2,159 +2,79 @@
             Document.getElementById
 --------------------------------------------------------------------*/
 /* Ejemplo1 */
-document.getElementById("saludo").innerHTML = "Hello mundo!"; 
+let container = document.getElementById("container");
+console.log(container.innerText);  
+
+
+let saludar = document.getElementById("saludo");
+console.log(saludar) 
+console.log(typeof saludar.innerHTML) 
  
 
 /* Ejemplo 2 */
-let texto = document.getElementById("intro");
-document.getElementById("demo").innerHTML = "El texto del párrafo introductorio es: " + texto.innerHTML;
+let lengMarcado = document.getElementById("html");
+lengMarcado.style.color = "red";
 
-
-/* Ejemplo 3 */
-let cambio = document.getElementById("saludos");
-cambio.style.color = "red";
-
-
-
-/* Ejemplo 4   Hover sobre el párrafo*/
-let parHover = document.getElementById("por-encima");
-parHover.addEventListener("mouseover", function() {
-    parHover.style.color = "blue"
-});
-
-
-document.getElementById("btnClick").addEventListener("click", function () {
-    document.getElementById("resClick").innerHTML = "Hiciste clic!";
-    this.innerHTML = "¡Gracias!"; // cambia el texto del botón
-});
-
-document.getElementById("nombre").addEventListener("input", function() {
-    document.getElementById("resInput").innerHTML = "Hola " + document.getElementById("nombre").value;
-});
 
 
 /* ------------------------------------------------------------------
             Document.getElementByClassName
 --------------------------------------------------------------------*/
 /* Ejemplo 1 */
-const elementos = document.getElementsByClassName("resaltado");
+let postres = document.getElementsByClassName("dulce");
+console.log(postres);
+console.log(postres.length);
 
-for (let i = 0; i < elementos.length; i++) {
-     elementos[i].style.color = "red";    
-}
 
 /* Ejemplo 2 */
-const notas = document.getElementsByClassName("nota");
-
-for (let i = 0; i < notas.length; i++) {
-     notas[i].textContent = "Texto modificado " + (i + 1);    
-}
-
-
-/* Ejemplo 3 */
-const items = document.getElementsByClassName("hoverItem");
-
-for (let i = 0; i < items.length; i++) {
-    items[i].addEventListener("mouseover", function() {
-        this.style.backgroundColor = "yellow";
-    });
-    items[i].addEventListener("mouseout", function() {
-        this.style.backgroundColor = "";
-    });
-}  
-
+let postres1 = document.getElementsByClassName("sal1");
+postres1[0].innerHTML = "Chocolate";
+console.log(postres1);
 
 
 /* ------------------------------------------------------------------
             Document.getElementsByTagName()
 --------------------------------------------------------------------*/
 /* Ejemplo 1 */
-function cambiarColor() {
-    //Selleciona todos los elementos p
-    let parrafos = document.getElementsByTagName("p")
-
-    //Recorre todos y cambia su color
-    for (let i = 0; i < parrafos.length; i++) {
-        parrafos[i].style.color = "blue";
-    }
-}
+let varios = document.getElementsByTagName("p");
+console.log(varios);
+varios[11].innerHTML = "Cine"
 
 
 /* Ejemplo 2 */
-let titulos = document.getElementsByTagName("h3");
-document.getElementById("resultado").innerHTML = "Hay " + titulos.length + " títulos H3 en la pagina.";
+let listaPizza = document.getElementsByTagName("li");
+console.log("Cantidad de elementos <li> encontrados: ", listaPizza.length)
+console.log("El tercer elemento <li> es:", listaPizza[2].textContent);
 
-
-/* Ejemplo 3 */
-function cambiarTexto() {
-    let items = document.getElementsByTagName("li");
-    for(let i = 0; i < items.length; i++) {
-        items[i].innerText = "Fruta " + (i+1);
-    }
-}
-
-/* ------------------------------------------------------------------
-            Document.getElementsByName()
---------------------------------------------------------------------*/
-/* Ejemplo 1 */
-function mostrarSeleccion () {
-    //Selecciona los elementos por su atributo name
-    let opciones = document.getElementsByName("lenguaje")
-
-    //Recorremos todas las opciones
-    for (let i = 0; i < opciones.length; i++) {
-        if (opciones[i].checked) {
-            document.getElementById("resultadoName").innerHTML = "seleccionaste: " + opciones[i].value;   
-        }
-    }
-}
 
 /* ------------------------------------------------------------------
             document.querySelector()
 --------------------------------------------------------------------*/
 /* Ejemplo 1 */
-const titulo = document.querySelector("#titulo");
-const boton = document.querySelector("#boton")
-
-boton.addEventListener("click", ()=> {
-    titulo.textContent = "¡texto cambiando";
-});
+let aceitunas = document.querySelector(".topping");
+console.log(aceitunas)
+console.log(typeof aceitunas)
 
 /* Ejemplo 2 */
-const parrafo = document.querySelector(".resaltad")
-parrafo.style.color = "yellow"
+let primer = document.querySelector(".cebolla#salado");
+let segundoEjemplo = document.querySelector(".demo")
+segundoEjemplo.innerHTML = primer.innerHTML
+console.log(segundoEjemplo)
+console.log(typeof segundoEjemplo)
 
 
-/* Ejemplo 3 */
-const input = document.querySelector("#miInput");
-const boton2 = document.querySelector("#btn");
-boton2.addEventListener("click",() => {
-    alert('El valor del input es: ' + input.value)
-});
-
-
-/* Ejemplo 4 */
-const destacado = document.querySelector("li.item.destacado");
-destacado.style.backgroundColor = "yellow";
+let albahaca = document.querySelector("ul li.topping")
+console.log(albahaca)
 
 
 /* ------------------------------------------------------------------
             document.querySelectorAll()
 --------------------------------------------------------------------*/
 /* Ejemplo 1 */
-function cambiarColo() {
-    let parrafs = document.querySelectorAll("p");
-    parrafs.forEach(function (p) {
-        p.style.color = "green";
-    });
-}
+let toppingsHelados = document.querySelectorAll(".topping-naranja.items")
+console.log(toppingsHelados)
+console.log(toppingsHelados [1])
+console.log(toppingsHelados.length)
 
-/* Ejemplo 2 */
-function marcar() {
-    let textos = document.querySelectorAll("#contenedor .texto")
-    textos.forEach(function (texto){
-        texto.style.border = "1px solid red"
-    })
-}
 
 

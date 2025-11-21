@@ -4,93 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/metodos-seleccion.css">
     <title>Mètodos de Selecciòn</title>
 </head>
-<style>
-    *{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-   
-    h1{
-    font-size: 3rem;
-    background-color: #e0f0ff;
-    width: 60%;
-    border: 2px solid rgba(180, 185, 185, 0.2);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    padding: 1.5rem;
-    border-radius: 2rem;
-    margin-left: 25rem;
-    }
-    .container{
-        font-size: 3rem;
-        margin: 5rem 7rem;
-    }
-    .byid{
-    background-color:  #a8d0e6;
-    }
-    .className{
-    background-color: #b7e4c7;
-    }
-    .tagName{
-    background-color: #ffd6a5;
-    }
-    .byName{
-    background-color:  #d6c1f5;
-    }
-    .queryselec{
-    background-color: #ade8f4;
-    }
-    .queryselect{
-    background-color: #fff3b0;
-    }
-
-    details{
-    background-color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 3rem;
-     width: 100%;
-    border: 2px solid rgba(180, 185, 185, 0.2);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    padding: 2rem;
-    border-radius: 2rem;
-    }
-    
-    .ejemplos{
-        margin-left: 6rem;
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-        
-    }
-    #saludo{
-        font-size: 3rem;
-        text-align: center;
-    }
-    p{
-        font-size: 2rem;
-        margin-left: 9rem;
-    }
-
-    button{
-        margin-left: 9rem;
-        font-size: 2rem;
-    }
-    input{
-        margin-left: 9rem;
-        font-size: 2rem;       
-    }
-    .resaltado{
-        font-size: 2rem;
-        margin-left: 9rem;
-    }
- h3, li, div {
-        font-size: 2rem;
-        margin-left: 9rem;
-    }
-
-
-</style>
-
 
 <body>
    <header class="header-principal">
@@ -105,7 +21,6 @@
         <p class="subtitulo">Ejemplos interactivos • 100% práctico</p>
       </div>
     </div>
-
     <!-- Navegación -->
     <nav class="header-nav">
       <a href="index.html"class="btn-destacado">Inicio</a>
@@ -113,9 +28,7 @@
       <a href="metodos-seleccion.html" class="btn-destacado">Metodos de Seleccion</a>
       <a href="mdm-index.html" class="btn-destacado">Metodos de Modificacion</a>
       <a href="AccesoTipadoParceoCasteo.html"class="btn-destacado">Acceso y Tipado</a>
-    
-   
-    </nav>
+       </nav>
 
     <!-- Menú móvil (hamburguesa) -->
     <button class="menu-toggle" aria-label="Abrir menú">
@@ -126,70 +39,44 @@
   </div>
 </header>
     <main>
-        <h1>Mètodos de Selecciòn</h1>
+        <h1 class="titulo-pagina">Mètodos de Selecciòn</h1>
+        <section id="container">
 
-        <section class="container">
             <details class="byid">
                 <summary>document.getElementById()</summary>
                     <details>
-                        <summary class="ejemplos">Ejemplo 1 <small>(Selecciona un elemento por su ID y le cambia el contenido)</small></summary>
-                            <h2 id="saludo"></h2> <!-- EJEMPLO 1 -->
+                        <summary class="ejemplos">Ejemplo 1 <small>(Selecciona un elemento por su ID )</small></summary>
+                            <h2 id="saludo">Buenos días</h2> 
                     </details>                    
- 
-                    
+                     
                     <details>
-                        <summary class="ejemplos">Ejemplo 2 <small>(Obtiene el contenido de un elemento y lo muestra en otro)</small></summary>
-                            <p id="intro">Cómo encontrar elementos HTML por su ID</p>
-                            <p id="demo"></p> <!-- EJEMPLO 2-->
+                        <summary class="ejemplos">Ejemplo 2 <small>(Selecciona un elemento por su ID y Cambia el color)</small></summary>
+                            <h2 class="html">HTML</h2>
+                            <h2 id="html">HTML</h2>
+                            <h2>HTML</h2>
                     </details>                    
- 
-                    
-                    <details>
-                        <summary class="ejemplos">Ejemplo 3 <small>(Cambia el color automáticamente al cargar)</small></summary>
-                            <p id="saludos">Hello Mundo</p>  <!-- Cambia a rojo al cargar -->
-                    </details>                    
- 
-                    
-                    <details>
-                        <summary class="ejemplos">Ejemplo 4 <small>(Reacciona a eventos como hover, click e input)</small></summary>
-                         <!-- EJEMPLOS 4 -->
-                            <p id="por-encima">Pasa el mouse por encima</p> <!-- hover -->
-
-
-                            <button id="btnClick">Haz clic aquì</button>
-                            <p id="resClick"></p>
-
-
-                            <input id="nombre" placeholder="Escribe tu nombre">
-                            <p id="resInput"></p>
-                    </details> 
+     
             </details>        
-
-
 
 
             <details class="className">
                 <summary>getElementsByClassName()</summary>
                     <details>
-                        <summary class="ejemplos">Ejemplo 1 <small>(Cambia el color de todos los elementos con la misma clase)</small></summary>
-                            <h2 class="resaltado">Elemento 1</h2>
-                            <h2 class="resaltado">Elemento 2</h2>
-                            <h2 class="resaltado">Elemento 3</h2>
-                    </details>
-                    
-                    <details>
-                        <summary class="ejemplos">Ejemplo 2 <small>(Cambia el texto de todos los pàrrafos con la misma clase)</small></summary>
-                            <p class="nota">Nota 1</p>
-                            <p class="nota">Nota 2</p>
-                            <p class="nota">Nota 3</p>
+                        <summary class="ejemplos">Ejemplo 1 <small>(Buscar elementos HTML por nombre de clase.)</small></summary>
+                        <p class="dulce">Galletas</p>
+                        <p class="dulce">Tartas</p>
+                        <p class="dulce">Gaseosa</p>
+                        <p class="sal">Pescado</p>
+
                     </details>  
 
                     <details>
-                        <summary class="ejemplos">Ejemplo 3 <small>(Cambia el estilo al pasar el mouse (hover) usando solo clase)</small></summary>
-                            <p class="hoverItem">Elemento 1</p>
-                            <p class="hoverItem">Elemento 2</p>
-                            <p class="hoverItem">Elemento 3</p>
-                    </details>  
+                        <summary class="ejemplos">Ejemplo 2 <small>(Cambia el párrafo 4)</small></summary>
+                        <p class="dulce1">Galletas</p>
+                        <p class="dulce1">Tartas</p>
+                        <p class="dulce1">Gaseosa</p>
+                        <p class="sal1">Pescado</p>
+                    </details>                 
             </details>        
     
 
@@ -197,48 +84,29 @@
             <details class="tagName">
                 <summary>getElementsByTagName()</summary>
                     <details>
-                        <summary class="ejemplos">Ejemplo 1 <small>(Cambia el color de todos los párrafos)</small></summary>
-                            <p>Primer párrafo</p>
-                            <p>Segundo párrafo</p>
-                            <p>tercer párrafo</p>
+                        <summary class="ejemplos tag">Ejemplo 1 <small>(busca los elementos por etiqueta)</small></summary>
+                        <p>Lenguaje</p>
+                        <h3>Historia</h3>
+                        <p>Ciencias</p>
+                        <h3>Arte</h3>
+                        <p>Museos</p>
 
-                            <button onclick="cambiarColor()">Cambiar color</button>
+                    </details> 
+                    
+                    <details>
+                        <summary class="ejemplos">Ejemplo 1 <small>(Lista )</small></summary>
+                        <ul id="lista-ingrediente">
+                            <li>Tomate</li>
+                            <li>Queso</li>
+                        </ul>
+
+                        <ol id="pasos-preparacion">
+                            <li>Lavar Ingredientes</li>
+                            <li>Cortar tomates</li>
+                        </ol>
+
                     </details>
                     
-                    <details open>
-                        <summary class="ejemplos">Ejemplo 2 <small>(Contar cuántos títulos h3 hay)</small></summary>
-                            <h3>Título 1</h3>
-                            <h3>Título 2</h3>
-                            <h3>Título 3</h3>
-
-                            <div id="resultado"></div>
-                    </details>  
-
-                    <details>
-                        <summary class="ejemplos">Ejemplo 3 <small>(Cambiar texto de todos los elementos li)</small></summary>
-                            <ul>
-                                <li>Manzana</li>
-                                <li>Banana</li>
-                                <li>Naranja</li>
-                            </ul>
-
-                            <button onclick="cambiarTexto()">Cambiar nombres</button>
-                    </details> 
-            </details>        
-
-
-            <details class="byName">
-                <summary>getElementsByName()</summary>
-                <details>
-                    <summary class="ejemplos">Selecciona los elementos por su atributo name</summary>
-                    <p>Elige un lenguaje:</p>
-                    <input type="radio" name="lenguaje" value="JavaScript"> JavaScript <br>
-                    <input type="radio" name="lenguaje" value="Python"> Python <br>
-                    <input type="radio" name="lenguaje" value="Java"> Java <br>
-
-                    <button onclick="mostrarSeleccion()">Mostrar selección</button>
-                    <p id="resultadoName"></p>
-                    </details>
             </details>        
 
 
@@ -246,65 +114,65 @@
                 <summary>querySelector()</summary>
                 <details>
                     <summary class="ejemplos">Ejemplo 1 <small>(Selecciona un elemento por ID)</small></summary>
-                    <h1 id="titulo">Hola, mundo</h1>
-                    <button id="boton">Cambiar texto</button>
-                </details>
-                
-                <details>
-                    <summary class="ejemplos">Ejemplo 2 <small>(Selecciona un elemento por clase)</small></summary>
-                    <p class="resaltad">Este es un párrafo resaltado</p>
-                    <p>Otro párrafo normal</p>
-                </details> 
-                
-                <details>
-                    <summary class="ejemplos">Ejemplo 3 <small>(Seleccionar un input usando un atributo)</small></summary>
-                    <input type="text" id="miInput" placeholder="Escribe algo aquí">                    
-                    <button id="btn">Mostrar valor</button>
-                </details>
-                
-                <details>
-                    <summary class="ejemplos">Ejemplo 4 <small>(Combinar selectores para seleccionar elementos específicos)</small></summary>
-                    <ul>
-                        <li class="item">Elemento 1</li>
-                        <li class="item">Elemento 2</li>
-                        <li class="item destacado">Elemento 3</li>
+                    <ul class="lista-toppings">
+                        <li id="aceitunas">Aceitunas</li>
+                        <li class="cebolla" id="salado" >Cebolla</li>
+                        <li class="topping"  id="albahaca">Albahaca</li>
+                        <li class="cebolla" id="salado">Champiñones</li>
                     </ul>
                 </details>
+                
+                <details>
+                    <summary class="ejemplos">Ejemplo 2 <small>(Devuelve el resultado que coincida con los 2 selectores)</small></summary>
+                    <p class="demo"></p>
+                </details> 
+                
             </details>        
 
 
             <details class="queryselect">
                 <summary>querySelectorAll()</summary>                
                 <details>
-                    <summary class="ejemplos">Ejemplo 1 <small>(Cambiar color a todos los párrafos)</small></summary>
-                    <p>Primer párrafo</p>
-                    <p>Segundo párrafo</p>
-                    <p>Tercer párrafo</p>
-                    <button onclick="cambiarColo()">Cambiar color</button>
-                </details> 
+                    <summary class="ejemplos">Ejemplo 1 <small>(Nodellist)</small></summary>
+                    <ul class="helados">
+                        <li class="topping-naranja items">Fresa</li>
+                        <li class="topping-naranja">Caramelo</li>
+                        <li class="topping-naranja items">Sirop de Chocolate</li>
+                        <li class="topping-naranja">Frambuesa</li>
+                        <li class="topping-naranja items">Piña</li>
+                        <li class="topping-naranja items">M&M</li>
 
-                <details>
-                    <summary class="ejemplos">Ejemplo 2 <small>(Seleccionar elementos dentro de un contenedor)</small></summary>
-                    <div id="contenedor">
-                        <p class="texto">Primer párrafo</p>
-                        <p class="texto">Segundo párrafo</p>
-                        <p class="texto">Tercer párrafo</p>
-                    </div>
-                    <button onclick="marcar()">Marcar</button>
+                    </ul>
                 </details> 
             </details>        
         </section>
-
-
-
-
-
     </main>
 
 
+    
     <footer>
-      <p>&copy; 2025 Derechos Reservados</p>
-    </footer> 
+        <div class="footer-contenido">
+            <div class="footer-logo">
+                <img src="assets/img/logo.png" alt="Logo">
+                <p>Proyecto basico de JavaScript</p>
+            </div>
+
+            <div class="footer-enlaces">
+                <h4>Navegación rápida</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Dom.html">DOM</a></li>
+                    <li><a href="metodos-seleccion.html">Metodos de Seleccion</a></li>
+                    <li><a href="mdm-index.html">Metodos de Modificacion</a></li>
+                    <li><a href="AccesoTipadoParceoCasteo.html">Acceso y Tipado</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-copy">
+                <p>© <span id="year"></span> DOMinators•  JavaScript</p>
+            </div>
+    </footer>
+
     <script src="assets/js/metodos-seleccion.js"></script>   
 </body>
 </html>
