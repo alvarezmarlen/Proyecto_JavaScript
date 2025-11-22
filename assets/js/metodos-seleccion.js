@@ -2,30 +2,30 @@
             Document.getElementById
 --------------------------------------------------------------------*/
 /* Ejemplo1 Puedo ver por consola */
-let container = document.getElementById("container");
+let container = document.getElementById("");
 /* console.log(container.innerText);  */    
 /* console.log(container.textContent);   */
 /* console.log(container.innerHTML);    */
 
 
-/* let saludar = document.getElementById("saludo").innerHTML = "Gracias";
-console.log(saludar)  */
-/* console.log(typeof saludar.innerHTML)  */
+/* let saludar = document.getElementById("saludo").innerHTML = "";
+console.log(saludar) 
+ */
  
 
 /* Ejemplo 2 */
-let lengMarcado = document.getElementById("html").style.color = "blue";
-
-
+/* let lengMarcado = document.getElementById("html").style.color = "blue";
+console.log(lengMarcado)
+ */
 
 
 /* ------------------------------------------------------------------
             Document.getElementByClassName
 --------------------------------------------------------------------*/
 /* Ejemplo 1 */
-let postres = document.getElementsByClassName("dulce");
-console.log(postres);
-console.log(postres.length);
+/* let postres = document.getElementsByClassName("dulce");
+console.log(postres); */
+/* console.log(postres.length); */
 
 
 /* Ejemplo 2 */
@@ -39,44 +39,42 @@ console.log(postres1); */
 --------------------------------------------------------------------*/
 /* Ejemplo 1 */
 /* let varios = document.getElementsByTagName("p");
-console.log(varios);
-varios[11].innerHTML = "Cine"
- */
+console.log(varios); */
+/* varios[10].innerHTML = "" */
+
 
 /* Ejemplo 2 */
-/* let listaPizza = document.getElementsByTagName("li");
-console.log("Cantidad de elementos <li> encontrados: ", listaPizza.length)
-console.log("El tercer elemento <li> es:", listaPizza[2].textContent);
- */
+/* let listaPizza = document.getElementsByTagName("li"); */
+/* console.log("Cantidad de elementos <li> encontrados: ", listaPizza.length) */
+/* console.log("El tercer elemento <li> es:", listaPizza[2].textContent); */
+/* console.log(listaPizza) */
 
 /* ------------------------------------------------------------------
             document.querySelector()
 --------------------------------------------------------------------*/
 /* Ejemplo 1 */
-/* let aceitunas = document.querySelector(".topping");
+/* let aceitunas = document.querySelector(".cebolla");
 console.log(aceitunas) */
-/* console.log(typeof aceitunas)
- */
+
+
 /* Ejemplo 2 */
 /* let primer = document.querySelector(".cebolla#salado");
 let segundoEjemplo = document.querySelector(".demo")
 segundoEjemplo.innerHTML = primer.innerHTML
 console.log(segundoEjemplo) */
-/* console.log(typeof segundoEjemplo) */
 
-
-/* let albahaca = document.querySelector("ul li.topping")
-console.log(albahaca) */
 
 
 /* ------------------------------------------------------------------
             document.querySelectorAll()
 --------------------------------------------------------------------*/
 /* Ejemplo 1 */
-/* let toppingsHelados = document.querySelectorAll(".topping-naranja.items")
-console.log(toppingsHelados) */
-/* console.log(toppingsHelados [1]) */
-/* console.log(toppingsHelados.length) */
-
+let toppingsHelados = document.querySelectorAll(".topping-naranja.items")
+/* console.log(toppingsHelados) */
+/* console.log(toppingsHelados [1] )*/
+/* toppingsHelados.forEach(function(items) {
+    items.style.color = "red"
+})  */
+console.log(items)
 
 
