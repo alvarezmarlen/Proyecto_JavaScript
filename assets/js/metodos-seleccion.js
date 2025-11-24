@@ -1,11 +1,7 @@
 /* ------------------------------------------------------------------
             Document.getElementById
 --------------------------------------------------------------------*/
-/* Ejemplo1 Puedo ver por consola */
-/* let container = document.getElementById(""); */
-/* console.log(container.innerText);  */    
-/* console.log(container.textContent);   */
-/* console.log(container.innerHTML);    */
+/* Ejemplo 1 */
 
 /* let saludar = document.getElementById("saludo").innerHTML = "";
 console.log(saludar) 
