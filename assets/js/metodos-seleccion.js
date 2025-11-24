@@ -76,8 +76,8 @@ console.log(cocina.textContent)
             document.querySelectorAll()
 --------------------------------------------------------------------*/
 /* Ejemplo 1 */
-let toppingsHelados = document.querySelectorAll(".topping-naranja.items")
-console.log(toppingsHelados)
+/* let toppingsHelados = document.querySelectorAll(".topping-naranja.items")
+console.log(toppingsHelados) */
 /* console.log(toppingsHelados[1]) */
 /* toppingsHelados[1].style.color = "red" */
 /* toppingsHelados[1].style.background = "yellow" */
