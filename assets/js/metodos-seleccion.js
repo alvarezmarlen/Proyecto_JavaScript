@@ -2,16 +2,15 @@
             Document.getElementById
 --------------------------------------------------------------------*/
 /* Ejemplo1 Puedo ver por consola */
-let container = document.getElementById("");
+/* let container = document.getElementById(""); */
 /* console.log(container.innerText);  */    
 /* console.log(container.textContent);   */
 /* console.log(container.innerHTML);    */
 
-
 /* let saludar = document.getElementById("saludo").innerHTML = "";
 console.log(saludar) 
  */
- 
+
 
 /* Ejemplo 2 */
 /* let lengMarcado = document.getElementById("html").style.color = "blue";
@@ -25,6 +24,7 @@ console.log(lengMarcado)
 /* Ejemplo 1 */
 /* let postres = document.getElementsByClassName("dulce");
 console.log(postres); */
+/* postres[1].style.color = "red" */
 /* console.log(postres.length); */
 
 
@@ -40,28 +40,28 @@ console.log(postres1); */
 /* Ejemplo 1 */
 /* let varios = document.getElementsByTagName("p");
 console.log(varios); */
+/* varios[11].style.color = "blue" */
+/* varios[11].style.background = "yellow" */
+
 /* varios[10].innerHTML = "" */
 
 
-/* Ejemplo 2 */
-/* let listaPizza = document.getElementsByTagName("li"); */
-/* console.log("Cantidad de elementos <li> encontrados: ", listaPizza.length) */
-/* console.log("El tercer elemento <li> es:", listaPizza[2].textContent); */
-/* console.log(listaPizza) */
 
 /* ------------------------------------------------------------------
             document.querySelector()
 --------------------------------------------------------------------*/
 /* Ejemplo 1 */
-/* let aceitunas = document.querySelector(".cebolla");
+/* let aceitunas = document.querySelector(".blanco#salado");
 console.log(aceitunas) */
+/* console.log(aceitunas.innerText) */
 
 
 /* Ejemplo 2 */
-/* let primer = document.querySelector(".cebolla#salado");
-let segundoEjemplo = document.querySelector(".demo")
-segundoEjemplo.innerHTML = primer.innerHTML
+/* let primer = document.querySelector(".blanco#salado"); */
+/* let segundoEjemplo = document.querySelector(".demo") */
+/* segundoEjemplo.innerHTML = primer.innerHTML
 console.log(segundoEjemplo) */
+
 
 
 
@@ -69,12 +69,16 @@ console.log(segundoEjemplo) */
             document.querySelectorAll()
 --------------------------------------------------------------------*/
 /* Ejemplo 1 */
-let toppingsHelados = document.querySelectorAll(".topping-naranja.items")
-/* console.log(toppingsHelados) */
-/* console.log(toppingsHelados [1] )*/
-/* toppingsHelados.forEach(function(items) {
-    items.style.color = "red"
-})  */
-console.log(items)
+/* let toppingsHelados = document.querySelectorAll(".topping-naranja.items")
+console.log(toppingsHelados) */
+/* console.log(toppingsHelados[1]) */
+/* toppingsHelados[1].style.color = "red" */
+/* toppingsHelados[1].style.background = "yellow" */
+
+/* toppingsHelados.forEach(function(todos){
+    todos.style.color = "pink"
+    todos.style.background = "yellow"
+}) */
+
 
 
