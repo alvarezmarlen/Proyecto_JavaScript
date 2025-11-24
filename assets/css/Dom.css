@@ -10,7 +10,7 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 font-family: sans-serif;
-margin: 30px;
+
 }
 .header-principal {
   background: linear-gradient(135deg, #0a0e17 0%, #1a2332 100%);
@@ -175,6 +175,7 @@ margin: 30px;
 
         section {
             padding-bottom: 2rem;
+            margin: 30px;
         }
 
         .section1 {
