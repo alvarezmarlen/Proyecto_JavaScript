@@ -52,9 +52,9 @@ const boton = document.getElementById("medir");
 
 boton.addEventListener("click", () => {
   const estilos = getComputedStyle(caja);
-  const ancho = estilos.width;   // Valor final calculado en px
+  const ancho = estilos.width;
 
-  alert("El ancho real de la caja es: " + ancho);
+  alert("El ancho real de la caja es --> " + ancho);
 });
 
 
