@@ -216,7 +216,7 @@ AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
     <p>
         Te permite saber los estilos finales que tiene un elemento en la pantalla.
     </p>
-    <p>
+    <!-- <p>
         Por ejemplo,
     </p>
     <code>
@@ -247,20 +247,14 @@ AQUI ESTA NUESTRO BARRA DE NAVEGACIÓN = HEADER + NAV
     <p>
         Nota: El color “darkblue” se devuelve como “rgb(0, 0, 139)” porque getComputedStyle() normaliza los valores de color al formato RGB. 
         Este comportamiento garantiza coherencia entre navegadores y es útil para cálculos de contraste o comparaciones visuales.
-    </p>
+    </p> -->
     </div>
     <div class="getCom-example">
         <p>
-           Detectar si un elemento está <strong>oculto o visible. </strong>
+           Saber el ancho real de una caja para acomodar elementos. 
         </p>
-        <span>
-            Imagina que tienes un botón que <strong>solo debe funcionar si un mensaje está visible.</strong><br>
-            El problema es que el mensaje puede estar oculto por CSS (por ejemplo display: none;), 
-            y tú necesitas saber si realmente se está mostrando en pantalla.
-        </span>
-        <p id="mensaje4" class="importante4">Este es un mensaje importante</p>
-        <button id="btn4">Verificar estado</button>
-
+        <div id="caja" class="contenedor">Caja de ejemplo</div>
+        <button id="medir">Medir ancho</button>
     </div>
 </section>
 <section class="manClassCss">

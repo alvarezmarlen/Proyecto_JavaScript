@@ -521,9 +521,12 @@ h1 {
     font-size: 1.3rem;
 }
 
-.importante4 {
-  display: none;  /* getComputedStyle() */
+.contenedor {
+  width: 50%;
+  padding: 20px;
+  background: lightblue;
 }
+
 
 
 /*  Manipulacion  de clases CSS    */

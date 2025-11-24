@@ -47,18 +47,14 @@ boton5.addEventListener("click", function() {
 });
 
 /* getComputed() */
-const mensaje6 = document.getElementById("mensaje4");
-const boton6 = document.getElementById("btn4");
+const caja = document.getElementById("caja");
+const boton = document.getElementById("medir");
 
-boton6.addEventListener("click", () => {
-  const estilos = getComputedStyle(mensaje6);
-  const visible = estilos.display !== "none";
+boton.addEventListener("click", () => {
+  const estilos = getComputedStyle(caja);
+  const ancho = estilos.width;   // Valor final calculado en px
 
-  if (visible) {
-    alert("El mensaje SÍ está visible");
-  } else {
-    alert("El mensaje NO está visible");
-  }
+  alert("El ancho real de la caja es: " + ancho);
 });
 
 
